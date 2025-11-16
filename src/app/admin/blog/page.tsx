@@ -8,9 +8,7 @@ import { blogPosts, BlogPost } from '@/data/blog';
 
 export default function AdminBlogPage() {
   const router = useRouter();
-  const { data: session, status } = useSession({
-    required: true,
-  });
+  const { data: session, status } = useSession();
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -119,6 +117,10 @@ export default function AdminBlogPage() {
         <p className="text-white text-lg">Loading...</p>
       </div>
     );
+  }
+
+  if (status === "unauthenticated" || !session) {
+    return null;
   }
   
   return (
