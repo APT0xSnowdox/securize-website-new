@@ -95,7 +95,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   // Simple markdown-like rendering for content
   const renderContent = (content: string) => {
     const lines = content.split('\n');
-    const elements: JSX.Element[] = [];
+    const elements: ReactElement[] = [];
     let currentParagraph: string[] = [];
     let inCodeBlock = false;
     let codeBlockContent: string[] = [];
