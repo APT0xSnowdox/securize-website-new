@@ -10,6 +10,7 @@ export interface BlogPost {
   category: string;
   tags: string[];
   featured?: boolean;
+  image?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -118,7 +119,7 @@ Each exploited vulnerability is assessed for:
 
 ## Real-World Results
 
-Our AI pentesting platform has successfully identified and exploited 500+ vulnerabilities since October 2025, including:
+Our AI pentesting platform has successfully identified and exploited 500+ vulnerabilities since September 2025, including:
 - Critical authentication bypasses
 - SQL injection vulnerabilities
 - XSS vulnerabilities across multiple contexts

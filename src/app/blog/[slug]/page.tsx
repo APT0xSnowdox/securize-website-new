@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactElement } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { blogPosts, BlogPost } from '@/data/blog';
 
 interface BlogPostPageProps {
@@ -15,6 +16,7 @@ interface BlogPostPageProps {
 export default function BlogPostPage({ params }: BlogPostPageProps) {
   const [post, setPost] = useState<BlogPost | null>(null);
   const [slug, setSlug] = useState<string>('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     params.then((resolvedParams) => {
@@ -25,32 +27,63 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   useEffect(() => {
     if (!slug) return;
 
-    // Load from localStorage first, then fallback to default
-    const savedPosts = localStorage.getItem('blogPosts');
-    let postsToSearch = blogPosts;
-    
-    if (savedPosts) {
-      try {
-        const parsed = JSON.parse(savedPosts);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          postsToSearch = parsed;
+    setIsLoading(true);
+
+    const findPost = () => {
+      const savedPosts = localStorage.getItem('blogPosts');
+      let postsToSearch = blogPosts;
+      if (savedPosts) {
+        try {
+          const parsed = JSON.parse(savedPosts);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            postsToSearch = parsed;
+          }
+        } catch (error) {
+          console.error('Error parsing posts from localStorage:', error);
         }
-      } catch (error) {
-        console.error('Error loading saved posts:', error);
       }
-    }
-    
-    const foundPost = postsToSearch.find(p => p.slug === slug);
-    if (foundPost) {
-      setPost(foundPost);
-    }
+      return postsToSearch.find(p => p.slug === slug);
+    };
+
+    // Retry mechanism to handle localStorage race conditions
+    let attempts = 0;
+    const interval = setInterval(() => {
+      const foundPost = findPost();
+      attempts++;
+      if (foundPost || attempts >= 5) {
+        if (foundPost) {
+          setPost(foundPost);
+        }
+        setIsLoading(false);
+        clearInterval(interval);
+      }
+    }, 100); // Check every 100ms, up to 0.5 seconds
+
+    return () => clearInterval(interval);
   }, [slug]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Loading Article...</h1>
+        </div>
+      </div>
+    );
+  }
 
   if (!post) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-center">
+        <div className="text-center p-4">
           <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
+          <p className="text-gray-400 mb-4">
+            Could not find an article with the slug: 
+            <code className="bg-gray-800 text-lime-400 px-2 py-1 rounded-md ml-2">{slug}</code>
+          </p>
+          <p className="text-gray-400 mb-8">
+            If you just created this post, please try refreshing the page or check the slug for typos in the admin panel.
+          </p>
           <Link href="/blog" className="text-lime-400 hover:text-lime-300">
             Back to Blog
           </Link>
@@ -285,6 +318,29 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 </span>
               ))}
             </div>
+
+            {/* Featured Image */}
+            {post.image && (
+              <div className="mt-8 mb-8 rounded-xl overflow-hidden border border-lime-400/20">
+                <div className="relative w-full h-96">
+                  {post.image.startsWith('data:') ? (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

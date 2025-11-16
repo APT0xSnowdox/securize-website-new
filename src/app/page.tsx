@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 // Hero Section Content - Easy to modify
 const HERO_CONTENT = {
-  headline: "Scale your offensive security in hours",
-  description: "Securize is an AI-powered penetration testing platform that delivers human-level security testing at machine speed. Deploy autonomous AI agents to discover, validate, and exploit vulnerabilities faster than ever.",
+  headline: "Enterprise-Grade Security Testing at Machine Speed",
+  description: "AI-powered penetration testing that delivers comprehensive vulnerability assessments in hours, not weeks.",
   ctaText: "Start a Pentest",
   ctaLink: "/pentest"
 };
@@ -47,7 +47,7 @@ const FEATURES_CONTENT = {
     },
     {
       title: "Proven Results",
-      description: "Validated against real-world vulnerabilities with 500+ application vulnerabilities discovered since October 2025, delivering reproducible proof-of-concepts."
+      description: "Validated against real-world vulnerabilities with 500+ application vulnerabilities discovered since September 2025, delivering reproducible proof-of-concepts."
     }
   ]
 };
@@ -153,52 +153,58 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 lg:pt-40 pb-20">
-        {/* Diagonal Grid Pattern Background */}
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-24 pb-16">
+        {/* Subtle Grid Pattern Background */}
+        <div className="absolute inset-0 opacity-[0.02]">
           <div 
             className="w-full h-full"
             style={{
               backgroundImage: `
-                repeating-linear-gradient(
-                  45deg,
-                  transparent,
-                  transparent 20px,
-                  rgba(255, 255, 255, 0.03) 20px,
-                  rgba(255, 255, 255, 0.03) 40px
-                ),
-                repeating-linear-gradient(
-                  -45deg,
-                  transparent,
-                  transparent 20px,
-                  rgba(255, 255, 255, 0.03) 20px,
-                  rgba(255, 255, 255, 0.03) 40px
-                )
-              `
+                linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '60px 60px'
             }}
           />
         </div>
 
+        {/* Subtle Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-gray-900/50" />
+
         {/* Hero Content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            {/* Main Headline - Larger */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 leading-tight tracking-tight">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-lime-400/20 bg-lime-400/5 backdrop-blur-sm">
+              <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
+              <span className="text-xs font-mono text-lime-400/80 uppercase tracking-wider">AI-Powered Security Platform</span>
+            </div>
+
+            {/* Main Headline - Professional Typography */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
               {HERO_CONTENT.headline}
             </h1>
 
-            {/* Description - Smaller and Neat */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            {/* Description - Concise and Professional */}
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
               {HERO_CONTENT.description}
             </p>
 
-            {/* CTA Button */}
+            {/* CTA Button - Professional Styling */}
             <Link
               href={HERO_CONTENT.ctaLink}
-              className="inline-block px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-colors shadow-lg hover:shadow-xl hover:shadow-lime-400/50"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-lime-400/30 hover:scale-[1.02]"
             >
               {HERO_CONTENT.ctaText}
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </Link>
+
+            {/* Trust Indicators */}
+            <div className="mt-16 pt-8 border-t border-gray-800/50">
+              <p className="text-sm text-gray-500 font-mono tracking-wider uppercase">Trusted by Security Teams</p>
+            </div>
           </div>
         </div>
       </section>

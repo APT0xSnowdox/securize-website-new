@@ -58,7 +58,7 @@ export default function About() {
 
             {/* Description */}
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-14 leading-relaxed max-w-4xl mx-auto">
-              Securize is <span className="text-lime-400 font-semibold">Asia's first AI-powered penetration testing platform</span>. Since October 2025, we've discovered <span className="text-lime-400 font-semibold">500+ application vulnerabilities</span> using autonomous AI agents that deliver human-level security testing at machine speed.
+              Securize is <span className="text-lime-400 font-semibold">Asia's first AI-powered penetration testing platform</span>. Since September 2025, we've discovered <span className="text-lime-400 font-semibold">500+ application vulnerabilities</span> using autonomous AI agents that deliver human-level security testing at machine speed.
             </p>
 
             {/* CTA Buttons */}
@@ -174,27 +174,24 @@ export default function About() {
                   
                   {/* Image Container */}
                   <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-lime-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-lime-400/20">
-                    {/* Placeholder for team member image */}
-                    <div className="w-full h-full bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 flex items-center justify-center">
-                      <span className="text-gray-500 text-sm font-medium">Team Member 2</span>
-                    </div>
-                    {/* Uncomment and replace with actual image when available */}
-                    {/* <Image
-                      src="/team/team-member-2.jpg"
-                      alt="Team Member 2"
+                    <Image
+                      src="/chira.jpeg"
+                      alt="Chirath Abeymanna"
                       width={224}
                       height={224}
                       className="w-full h-full rounded-full object-cover object-center grayscale group-hover:scale-110 transition-all duration-300"
-                    /> */}
+                      style={{ objectPosition: '35% 15%' }}
+                      priority
+                    />
                   </div>
                   
                   {/* Status Indicator */}
                   <div className="absolute bottom-2 right-2 w-4 h-4 bg-lime-400 rounded-full border-2 border-black shadow-lg" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
-                  Team Member 2
+                  Chirath Abeymanna
                 </h3>
-                <p className="text-gray-400 text-lg mb-3">Head of Security</p>
+                <p className="text-gray-400 text-lg mb-3">CTO</p>
                 <div className="flex items-center justify-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-lime-400 rounded-full animate-pulse" />
                   <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">Active</span>
@@ -239,27 +236,22 @@ export default function About() {
                   
                   {/* Image Container */}
                   <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-lime-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-lime-400/20">
-                    {/* Placeholder for team member image */}
-                    <div className="w-full h-full bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 flex items-center justify-center">
-                      <span className="text-gray-500 text-sm font-medium">Team Member 4</span>
-                    </div>
-                    {/* Uncomment and replace with actual image when available */}
-                    {/* <Image
-                      src="/team/team-member-4.jpg"
-                      alt="Team Member 4"
+                    <Image
+                      src="/pamali.jpeg"
+                      alt="Pamali Rodrigo"
                       width={224}
                       height={224}
                       className="w-full h-full rounded-full object-cover object-center grayscale group-hover:scale-110 transition-all duration-300"
-                    /> */}
+                    />
                   </div>
                   
                   {/* Status Indicator */}
                   <div className="absolute bottom-2 right-2 w-4 h-4 bg-lime-400 rounded-full border-2 border-black shadow-lg" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
-                  Team Member 4
+                  Pamali Rodrigo
                 </h3>
-                <p className="text-gray-400 text-lg mb-3">Team Member</p>
+                <p className="text-gray-400 text-lg mb-3">Head of Engineering</p>
                 <div className="flex items-center justify-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-lime-400 rounded-full animate-pulse" />
                   <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">Active</span>

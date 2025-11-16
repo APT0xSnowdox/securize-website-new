@@ -2,26 +2,45 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { blogPosts, getFeaturedPosts, BlogPost } from '@/data/blog';
 
 export default function BlogPage() {
-  const [allPosts, setAllPosts] = useState<BlogPost[]>(blogPosts);
-  const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>(getFeaturedPosts());
+  const [allPosts, setAllPosts] = useState<BlogPost[]>([]);
+  const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
 
-  useEffect(() => {
-    // Load posts from localStorage if available
+  const loadPosts = () => {
     const savedPosts = localStorage.getItem('blogPosts');
+    let postsToLoad = blogPosts;
     if (savedPosts) {
       try {
         const parsed = JSON.parse(savedPosts);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          setAllPosts(parsed);
-          setFeaturedPosts(parsed.filter((post: BlogPost) => post.featured));
+          postsToLoad = parsed;
         }
       } catch (error) {
         console.error('Error loading saved posts:', error);
       }
     }
+    setAllPosts(postsToLoad);
+    setFeaturedPosts(postsToLoad.filter((post: BlogPost) => post.featured));
+  };
+
+  useEffect(() => {
+    loadPosts();
+
+    // Listen for the custom event to reload posts when they are updated
+    const handleStorageUpdate = () => {
+      console.log('Reloading posts due to storage update...');
+      loadPosts();
+    };
+
+    window.addEventListener('storageUpdated', handleStorageUpdate);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('storageUpdated', handleStorageUpdate);
+    };
   }, []);
 
   return (
@@ -141,6 +160,26 @@ export default function BlogPage() {
                         }} />
                       </div>
 
+                      {/* Featured Image */}
+                      {post.image && (
+                        <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden border border-lime-400/20">
+                          {post.image.startsWith('data:') ? (
+                            <img
+                              src={post.image}
+                              alt={post.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                          ) : (
+                            <Image
+                              src={post.image}
+                              alt={post.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                          )}
+                        </div>
+                      )}
+
                       <div className="relative z-10 pl-6">
                         {/* Category */}
                         <div className="mb-4">
@@ -249,6 +288,26 @@ export default function BlogPage() {
                         animation: 'pulse-glow 2s ease-in-out infinite'
                       }}
                     />
+
+                    {/* Featured Image */}
+                    {post.image && (
+                      <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-lime-400/20">
+                        {post.image.startsWith('data:') ? (
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        ) : (
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        )}
+                      </div>
+                    )}
 
                     <div className="relative z-10 pl-6">
                       {/* Category */}

@@ -1,17 +1,25 @@
 'use client';
 
+import { useSession, signOut } from 'next-auth/react';
+import { redirect } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { blogPosts, BlogPost } from '@/data/blog';
 
-export default function BlogAdminPage() {
+export default function AdminBlogPage() {
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect('/admin/login');
+    },
+  });
+
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
   const [isCreating, setIsCreating] = useState(false);
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    // Load posts from localStorage or use default
     const savedPosts = localStorage.getItem('blogPosts');
     if (savedPosts) {
       setPosts(JSON.parse(savedPosts));
@@ -48,17 +56,19 @@ export default function BlogAdminPage() {
     let newPosts: BlogPost[];
     
     if (isCreating) {
-      // Check if slug already exists
       if (posts.find(p => p.slug === postData.slug)) {
         alert('A post with this slug already exists. Please use a different slug.');
         return;
       }
       newPosts = [...posts, postData];
     } else {
-      newPosts = posts.map(p => p.slug === postData.slug ? postData : p);
+      newPosts = posts.map(p => p.slug === editingPost?.slug ? postData : p);
     }
     
     savePosts(newPosts);
+    // Dispatch a custom event to notify other components of the change
+    window.dispatchEvent(new CustomEvent('storageUpdated'));
+
     setShowForm(false);
     setEditingPost(null);
     setIsCreating(false);
@@ -69,41 +79,48 @@ export default function BlogAdminPage() {
     setEditingPost(null);
     setIsCreating(false);
   };
-
+  
   const exportPosts = () => {
-    const dataStr = JSON.stringify(posts, null, 2);
-    const dataBlob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(dataBlob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'blog-posts.json';
-    link.click();
-  };
+     const dataStr = JSON.stringify(posts, null, 2);
+     const dataBlob = new Blob([dataStr], { type: 'application/json' });
+     const url = URL.createObjectURL(dataBlob);
+     const link = document.createElement('a');
+     link.href = url;
+     link.download = 'blog-posts.json';
+     link.click();
+   };
+ 
+   const importPosts = (event: React.ChangeEvent<HTMLInputElement>) => {
+     const file = event.target.files?.[0];
+     if (file) {
+       const reader = new FileReader();
+       reader.onload = (e) => {
+         try {
+           const imported = JSON.parse(e.target?.result as string);
+           if (Array.isArray(imported)) {
+             savePosts(imported);
+             alert('Posts imported successfully!');
+           }
+         } catch (error) {
+           alert('Error importing posts. Please check the file format.');
+         }
+       };
+       reader.readAsText(file);
+     }
+   };
 
-  const importPosts = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        try {
-          const imported = JSON.parse(e.target?.result as string);
-          if (Array.isArray(imported)) {
-            savePosts(imported);
-            alert('Posts imported successfully!');
-          }
-        } catch (error) {
-          alert('Error importing posts. Please check the file format.');
-        }
-      };
-      reader.readAsText(file);
-    }
-  };
-
+  if (status === "loading") {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-black">
+        <p className="text-white text-lg">Loading...</p>
+      </div>
+    );
+  }
+  
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
       <section className="relative pt-32 lg:pt-40 pb-12 overflow-hidden border-b border-gray-800">
-        {/* Tech Grid Background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
@@ -126,15 +143,15 @@ export default function BlogAdminPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2">
                   Blog Management
                 </h1>
-                <p className="text-gray-400">Create, edit, and manage your blog articles</p>
+                <p className="text-gray-400">Welcome, <span className="font-semibold text-lime-400">{session.user?.name}</span>!</p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/blog"
+                 <button
+                  onClick={() => signOut({ callbackUrl: '/' })}
                   className="px-6 py-3 bg-gray-800 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors border border-gray-700"
                 >
-                  View Blog
-                </Link>
+                  Sign Out
+                </button>
                 <button
                   onClick={handleCreate}
                   className="px-6 py-3 bg-lime-400 text-black rounded-lg font-semibold hover:bg-lime-300 transition-all duration-300 hover:scale-105 shadow-lg"
@@ -294,18 +311,72 @@ function ArticleForm({
     readTime: '5 min read',
     category: '',
     tags: [],
-    featured: false
+    featured: false,
+    image: ''
   });
 
   const [tagInput, setTagInput] = useState('');
+  const [imagePreview, setImagePreview] = useState<string | null>(post?.image || null);
+  // A post being edited has its slug manually set from the start.
+  const [isSlugManuallyEdited, setIsSlugManuallyEdited] = useState(!!post);
+
+  // Helper function to generate a URL-friendly slug from a string
+  const slugify = (text: string) =>
+    text
+      .toLowerCase()
+      .replace(/\s+/g, '-')        // Replace spaces with -
+      .replace(/[^\w-]+/g, '')     // Remove all non-word chars
+      .replace(/--+/g, '-')        // Replace multiple - with single -
+      .replace(/^-+/, '')           // Trim - from start of text
+      .replace(/-+$/, '');          // Trim - from end of text
+
+  useEffect(() => {
+    // Auto-generate slug from title, but only if user hasn't edited it
+    if (!isSlugManuallyEdited && formData.title) {
+      setFormData(prev => ({
+        ...prev,
+        slug: slugify(prev.title)
+      }));
+    }
+  }, [formData.title, isSlugManuallyEdited]);
+
+  useEffect(() => {
+    if (post?.image) {
+      setImagePreview(post.image);
+    } else {
+      setImagePreview(null);
+    }
+  }, [post]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
+    
+    if (name === 'slug') {
+      setIsSlugManuallyEdited(true);
+    }
+
     if (type === 'checkbox') {
       const checked = (e.target as HTMLInputElement).checked;
       setFormData(prev => ({ ...prev, [name]: checked }));
     } else {
       setFormData(prev => ({ ...prev, [name]: value }));
+      if (name === 'image') {
+        setImagePreview(value);
+      }
+    }
+  };
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // Create a local preview URL
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const result = reader.result as string;
+        setImagePreview(result);
+        setFormData(prev => ({ ...prev, image: result }));
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -323,21 +394,18 @@ function ArticleForm({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validation
     if (!formData.slug || !formData.title || !formData.content) {
       alert('Please fill in all required fields (slug, title, content)');
       return;
     }
 
-    // Generate slug from title if empty
-    if (!formData.slug && formData.title) {
-      formData.slug = formData.title
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '');
-    }
+    // Ensure the final slug is clean before saving
+    const finalData = {
+      ...formData,
+      slug: slugify(formData.slug)
+    };
 
-    onSave(formData);
+    onSave(finalData);
   };
 
   return (
@@ -467,6 +535,56 @@ function ArticleForm({
               />
               <span className="ml-3 text-gray-300">Featured Article</span>
             </label>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Featured Image
+          </label>
+          <div className="space-y-3">
+            <div className="flex gap-3">
+              <input
+                type="text"
+                name="image"
+                value={formData.image || ''}
+                onChange={handleChange}
+                className="flex-1 px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+                placeholder="/image.jpg or https://example.com/image.jpg"
+              />
+              <label className="px-4 py-3 bg-gray-800 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors border border-gray-700 cursor-pointer">
+                Upload
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  className="hidden"
+                />
+              </label>
+            </div>
+            {imagePreview && (
+              <div className="relative w-full h-64 rounded-lg overflow-hidden border border-lime-400/20">
+                <img
+                  src={imagePreview}
+                  alt="Preview"
+                  className="w-full h-full object-cover"
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setImagePreview(null);
+                    setFormData(prev => ({ ...prev, image: '' }));
+                  }}
+                  className="absolute top-2 right-2 px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
+                >
+                  Remove
+                </button>
+              </div>
+            )}
+            <p className="text-xs text-gray-500">
+              Enter an image URL/path (e.g., /image.jpg) or upload an image file. Images in the public folder can be referenced with /filename.jpg
+            </p>
           </div>
         </div>
 
