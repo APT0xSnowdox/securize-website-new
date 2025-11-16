@@ -19,8 +19,10 @@ export default function BlogPage() {
         if (Array.isArray(parsed) && parsed.length > 0) {
           // Use saved posts if available (they may include edited initial posts)
           postsToLoad = parsed;
+          console.log(`Loaded ${postsToLoad.length} posts from localStorage`);
         } else {
           postsToLoad = [...blogPosts];
+          console.log('localStorage was empty, using initial posts');
         }
       } catch (error) {
         console.error('Error loading saved posts:', error);
@@ -29,15 +31,22 @@ export default function BlogPage() {
     } else {
       // No saved posts, use initial posts
       postsToLoad = [...blogPosts];
+      console.log('No localStorage data, using initial posts');
     }
     
     // Merge with initial posts for any new posts not in localStorage
     const savedSlugs = new Set(postsToLoad.map(p => p.slug));
     const newInitialPosts = blogPosts.filter(p => !savedSlugs.has(p.slug));
-    postsToLoad = [...postsToLoad, ...newInitialPosts];
+    if (newInitialPosts.length > 0) {
+      console.log(`Merging ${newInitialPosts.length} initial posts not in localStorage`);
+      postsToLoad = [...postsToLoad, ...newInitialPosts];
+    }
     
     // Sort by date (newest first)
     postsToLoad.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    
+    console.log(`Total posts loaded: ${postsToLoad.length}`);
+    console.log('Post slugs:', postsToLoad.map(p => p.slug));
     
     setAllPosts(postsToLoad);
     setFeaturedPosts(postsToLoad.filter((post: BlogPost) => post.featured));
@@ -52,11 +61,28 @@ export default function BlogPage() {
       loadPosts();
     };
 
-    window.addEventListener('storageUpdated', handleStorageUpdate);
+    // Listen for actual localStorage changes (works across tabs)
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === 'blogPosts') {
+        console.log('Reloading posts due to localStorage change...');
+        loadPosts();
+      }
+    };
 
-    // Cleanup the event listener on component unmount
+    window.addEventListener('storageUpdated', handleStorageUpdate);
+    window.addEventListener('storage', handleStorageChange);
+    
+    // Also listen for focus to reload when tab becomes active (in case of same-tab updates)
+    const handleFocus = () => {
+      loadPosts();
+    };
+    window.addEventListener('focus', handleFocus);
+
+    // Cleanup the event listeners on component unmount
     return () => {
       window.removeEventListener('storageUpdated', handleStorageUpdate);
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('focus', handleFocus);
     };
   }, []);
 
@@ -288,6 +314,12 @@ export default function BlogPage() {
                 Latest Posts
               </h2>
               <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto mt-4" />
+              <button
+                onClick={loadPosts}
+                className="mt-4 px-4 py-2 text-sm text-lime-400 hover:text-lime-300 border border-lime-400/30 rounded-lg hover:border-lime-400/50 transition-colors"
+              >
+                Refresh Posts
+              </button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

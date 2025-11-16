@@ -55,10 +55,17 @@ export default function AdminBlogPage() {
   }, []);
 
   const savePosts = (newPosts: BlogPost[]) => {
+    // Ensure we include all initial posts that aren't in newPosts (in case they were removed)
+    const newPostSlugs = new Set(newPosts.map(p => p.slug));
+    const missingInitialPosts = blogPosts.filter(p => !newPostSlugs.has(p.slug));
+    const allPosts = [...newPosts, ...missingInitialPosts];
+    
     // Sort by date (newest first)
-    const sortedPosts = [...newPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const sortedPosts = [...allPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     setPosts(sortedPosts);
     localStorage.setItem('blogPosts', JSON.stringify(sortedPosts));
+    console.log(`Saved ${sortedPosts.length} posts to localStorage`);
+    console.log('Saved post slugs:', sortedPosts.map(p => p.slug));
   };
 
   const handleCreate = () => {
@@ -102,6 +109,11 @@ export default function AdminBlogPage() {
     savePosts(newPosts);
     // Dispatch a custom event to notify other components of the change
     window.dispatchEvent(new CustomEvent('storageUpdated'));
+    
+    // Also trigger a manual reload after a short delay to ensure localStorage is updated
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('storageUpdated'));
+    }, 100);
 
     setShowForm(false);
     setEditingPost(null);
