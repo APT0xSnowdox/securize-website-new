@@ -159,11 +159,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
                   Nathaneal Meththananda
                 </h3>
-                <p className="text-gray-400 text-lg mb-3">Founder and CEO</p>
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-lime-400 rounded-full animate-pulse" />
-                  <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">Active</span>
-                </div>
+                <p className="text-gray-400 text-lg">Founder and CEO</p>
               </div>
 
               {/* Team Member 2 */}
@@ -191,11 +187,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
                   Chirath Abeymanna
                 </h3>
-                <p className="text-gray-400 text-lg mb-3">CTO</p>
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-lime-400 rounded-full animate-pulse" />
-                  <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">Active</span>
-                </div>
+                <p className="text-gray-400 text-lg">CTO</p>
               </div>
 
               {/* Team Member 3 */}
@@ -221,11 +213,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
                   Amika Deshapriya
                 </h3>
-                <p className="text-gray-400 text-lg mb-3">Head of AI</p>
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-lime-400 rounded-full animate-pulse" />
-                  <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">Active</span>
-                </div>
+                <p className="text-gray-400 text-lg">Head of AI</p>
               </div>
 
               {/* Team Member 4 */}
@@ -251,11 +239,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
                   Pamali Rodrigo
                 </h3>
-                <p className="text-gray-400 text-lg mb-3">Head of Engineering</p>
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-lime-400 rounded-full animate-pulse" />
-                  <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">Active</span>
-                </div>
+                <p className="text-gray-400 text-lg">Head of Engineering</p>
               </div>
             </div>
 

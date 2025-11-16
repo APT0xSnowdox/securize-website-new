@@ -174,12 +174,6 @@ export default function Home() {
         {/* Hero Content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-lime-400/20 bg-lime-400/5 backdrop-blur-sm">
-              <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
-              <span className="text-xs font-mono text-lime-400/80 uppercase tracking-wider">AI-Powered Security Platform</span>
-            </div>
-
             {/* Main Headline - Professional Typography */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
               {HERO_CONTENT.headline}
@@ -307,12 +301,6 @@ export default function Home() {
                         <div className="text-gray-300 text-sm sm:text-base leading-relaxed text-left">
                           {stat.description}
                         </div>
-
-                        {/* Tech Indicator */}
-                        <div className="mt-4 flex items-center space-x-2 text-left">
-                          <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
-                          <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">Verified</span>
-                        </div>
                       </div>
 
                       {/* Hover Glow Effect */}
@@ -364,11 +352,6 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             {/* Professional Heading */}
             <div className="text-center mb-16 lg:mb-20">
-              <div className="inline-block mb-4">
-                <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/30 px-4 py-2 rounded-full">
-                  Enterprise Security Platform
-                </span>
-              </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
                 {FEATURES_CONTENT.heading}
               </h2>
@@ -498,12 +481,6 @@ export default function Home() {
                     <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                       {feature.description}
                     </p>
-
-                    {/* Tech Indicator */}
-                    <div className="mt-6 flex items-center space-x-2 pt-4 border-t border-lime-400/20 text-left">
-                      <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
-                      <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">AI-Powered</span>
-                    </div>
                   </div>
 
                   {/* Hover Glow Effect */}
@@ -553,13 +530,6 @@ export default function Home() {
 
           {/* Content */}
           <div className="relative z-10 max-w-lg text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-block mb-6">
-              <span className="text-lime-400 text-xs font-mono tracking-widest uppercase border border-lime-400/40 px-3 py-1.5 rounded-full">
-                Enterprise Platform
-              </span>
-            </div>
-            
             {/* Title */}
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
               {COMPREHENSIVE_SECURITY_CONTENT.title}
@@ -685,12 +655,6 @@ export default function Home() {
                   <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-left">
                     {feature.description}
                   </p>
-                  
-                  {/* Tech Indicator */}
-                  <div className="mt-4 flex items-center space-x-2 pt-3 border-t border-lime-400/20 text-left">
-                    <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
-                    <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider">Enterprise Grade</span>
-                  </div>
                 </div>
 
                 {/* Hover Glow Effect */}
