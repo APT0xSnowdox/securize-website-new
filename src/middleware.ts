@@ -4,7 +4,9 @@ export default withAuth({
   // Matches the pages config in `[...nextauth]`
   pages: {
     signIn: '/admin/login',
-    error: '/api/auth/error',
+  },
+  callbacks: {
+    authorized: ({ token }) => !!token,
   },
 })
 

@@ -44,15 +44,14 @@ export default function Header() {
             </Link>
             {/* Services Dropdown */}
             <div className="relative group">
-              <Link 
-                href="/services" 
-                className="px-3 py-2 text-gray-400 hover:text-gray-200 transition-all duration-200 font-medium text-sm lg:text-base flex items-center gap-1"
+              <div
+                className="px-3 py-2 text-gray-400 hover:text-gray-200 transition-all duration-200 font-medium text-sm lg:text-base flex items-center gap-1 cursor-pointer"
               >
                 Services
                 <svg className="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-              </Link>
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-gray-900/90 backdrop-blur-md rounded-xl shadow-2xl border border-gray-800/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-                <div className="p-2">
+              </div>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 bg-gray-900/90 backdrop-blur-md rounded-xl shadow-2xl border border-gray-800/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+                <div className="p-2 pt-0">
                   {services.map((service) => (
                     <Link
                       key={service.name}

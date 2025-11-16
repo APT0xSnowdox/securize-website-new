@@ -1,18 +1,22 @@
 'use client';
 
 import { useSession, signOut } from 'next-auth/react';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { blogPosts, BlogPost } from '@/data/blog';
 
 export default function AdminBlogPage() {
+  const router = useRouter();
   const { data: session, status } = useSession({
     required: true,
-    onUnauthenticated() {
-      redirect('/admin/login');
-    },
   });
+
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/admin/login');
+    }
+  }, [status, router]);
 
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
