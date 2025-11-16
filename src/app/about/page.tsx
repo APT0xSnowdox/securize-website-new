@@ -129,7 +129,7 @@ export default function About() {
                 Meet the Experts
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                World-class security researchers building the future of AI-powered penetration testing
+                 security researchers and developers building the future of AI-powered penetration testing
               </p>
               <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto mt-6" />
             </div>

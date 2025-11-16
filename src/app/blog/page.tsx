@@ -11,17 +11,34 @@ export default function BlogPage() {
 
   const loadPosts = () => {
     const savedPosts = localStorage.getItem('blogPosts');
-    let postsToLoad = blogPosts;
+    let postsToLoad: BlogPost[] = [];
+    
     if (savedPosts) {
       try {
         const parsed = JSON.parse(savedPosts);
         if (Array.isArray(parsed) && parsed.length > 0) {
+          // Use saved posts if available (they may include edited initial posts)
           postsToLoad = parsed;
+        } else {
+          postsToLoad = [...blogPosts];
         }
       } catch (error) {
         console.error('Error loading saved posts:', error);
+        postsToLoad = [...blogPosts];
       }
+    } else {
+      // No saved posts, use initial posts
+      postsToLoad = [...blogPosts];
     }
+    
+    // Merge with initial posts for any new posts not in localStorage
+    const savedSlugs = new Set(postsToLoad.map(p => p.slug));
+    const newInitialPosts = blogPosts.filter(p => !savedSlugs.has(p.slug));
+    postsToLoad = [...postsToLoad, ...newInitialPosts];
+    
+    // Sort by date (newest first)
+    postsToLoad.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    
     setAllPosts(postsToLoad);
     setFeaturedPosts(postsToLoad.filter((post: BlogPost) => post.featured));
   };

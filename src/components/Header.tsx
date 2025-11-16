@@ -7,7 +7,7 @@ import Image from 'next/image';
 const services = [
   { name: 'Red Team Ops', href: '/red-team-ops' },
   { name: 'MDR', href: '/services#mdr' },
-  { name: 'Dark Web Monitoring', href: '/services#dark-web-monitoring' },
+  { name: 'Dark Web Monitoring', href: '/dark-web-monitoring' },
   { name: 'PDPA and ISO 27001', href: '/services#pdpa-iso-27001' },
 ];
 

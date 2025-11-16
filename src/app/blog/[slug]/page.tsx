@@ -31,17 +31,31 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
     const findPost = () => {
       const savedPosts = localStorage.getItem('blogPosts');
-      let postsToSearch = blogPosts;
+      let postsToSearch: BlogPost[] = [];
+      
       if (savedPosts) {
         try {
           const parsed = JSON.parse(savedPosts);
           if (Array.isArray(parsed) && parsed.length > 0) {
+            // Use saved posts if available (they may include edited initial posts)
             postsToSearch = parsed;
+          } else {
+            postsToSearch = [...blogPosts];
           }
         } catch (error) {
           console.error('Error parsing posts from localStorage:', error);
+          postsToSearch = [...blogPosts];
         }
+      } else {
+        // No saved posts, use initial posts
+        postsToSearch = [...blogPosts];
       }
+      
+      // Merge with initial posts for any new posts not in localStorage
+      const savedSlugs = new Set(postsToSearch.map(p => p.slug));
+      const newInitialPosts = blogPosts.filter(p => !savedSlugs.has(p.slug));
+      postsToSearch = [...postsToSearch, ...newInitialPosts];
+      
       return postsToSearch.find(p => p.slug === slug);
     };
 

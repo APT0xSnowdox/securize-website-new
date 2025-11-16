@@ -23,16 +23,42 @@ export default function AdminBlogPage() {
 
   useEffect(() => {
     const savedPosts = localStorage.getItem('blogPosts');
+    let postsToLoad: BlogPost[] = [];
+    
     if (savedPosts) {
-      setPosts(JSON.parse(savedPosts));
+      try {
+        const parsed = JSON.parse(savedPosts);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          // Use saved posts if available (they may include edited initial posts)
+          postsToLoad = parsed;
+        } else {
+          postsToLoad = [...blogPosts];
+        }
+      } catch (error) {
+        console.error('Error loading saved posts:', error);
+        postsToLoad = [...blogPosts];
+      }
     } else {
-      setPosts(blogPosts);
+      // No saved posts, use initial posts
+      postsToLoad = [...blogPosts];
     }
+    
+    // Merge with initial posts for any new posts not in localStorage
+    const savedSlugs = new Set(postsToLoad.map(p => p.slug));
+    const newInitialPosts = blogPosts.filter(p => !savedSlugs.has(p.slug));
+    postsToLoad = [...postsToLoad, ...newInitialPosts];
+    
+    // Sort by date (newest first)
+    postsToLoad.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    
+    setPosts(postsToLoad);
   }, []);
 
   const savePosts = (newPosts: BlogPost[]) => {
-    setPosts(newPosts);
-    localStorage.setItem('blogPosts', JSON.stringify(newPosts));
+    // Sort by date (newest first)
+    const sortedPosts = [...newPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    setPosts(sortedPosts);
+    localStorage.setItem('blogPosts', JSON.stringify(sortedPosts));
   };
 
   const handleCreate = () => {
@@ -58,7 +84,13 @@ export default function AdminBlogPage() {
     let newPosts: BlogPost[];
     
     if (isCreating) {
-      if (posts.find(p => p.slug === postData.slug)) {
+      // Check if slug exists in both current posts and initial blogPosts
+      const allExistingSlugs = new Set([
+        ...posts.map(p => p.slug),
+        ...blogPosts.map(p => p.slug)
+      ]);
+      
+      if (allExistingSlugs.has(postData.slug)) {
         alert('A post with this slug already exists. Please use a different slug.');
         return;
       }
@@ -205,6 +237,14 @@ export default function AdminBlogPage() {
                       Export JSON
                     </button>
                   </div>
+                </div>
+
+                {/* Vercel Deployment Info */}
+                <div className="mb-8 p-4 bg-lime-400/10 border border-lime-400/30 rounded-lg">
+                  <p className="text-sm text-gray-300">
+                    <span className="text-lime-400 font-semibold">Note for Vercel Deployment:</span> Posts saved in localStorage won't persist on Vercel. 
+                    After creating articles, export them using the "Export JSON" button and import them after deployment, or add them to <code className="text-lime-400">src/data/blog.ts</code>.
+                  </p>
                 </div>
 
                 {/* Articles List */}
