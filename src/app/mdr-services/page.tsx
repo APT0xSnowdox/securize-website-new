@@ -142,8 +142,8 @@ export default function MDRServicesPage() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -155,7 +155,7 @@ export default function MDRServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-6">
-              <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/40 px-4 py-2 rounded-full">
+              <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/40 px-4 py-2 rounded-full">
                 Managed Security Service
               </span>
             </div>
@@ -167,7 +167,7 @@ export default function MDRServicesPage() {
             </p>
             <Link
               href={MDR_CONTENT.hero.ctaLink}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-lime-400/30 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.02]"
             >
               {MDR_CONTENT.hero.ctaText}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,8 +183,8 @@ export default function MDRServicesPage() {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -207,8 +207,8 @@ export default function MDRServicesPage() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -218,7 +218,7 @@ export default function MDRServicesPage() {
           <div className="max-w-7xl mx-auto">
             <div className="mb-12 text-center">
               <div className="inline-block mb-4">
-                <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/30 px-4 py-2 rounded-full">
+                <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/30 px-4 py-2 rounded-full">
                   Capabilities
                 </span>
               </div>
@@ -234,14 +234,14 @@ export default function MDRServicesPage() {
               {MDR_CONTENT.capabilities.features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 lg:p-8 border border-lime-400/20 hover:border-lime-400/50 hover:shadow-xl hover:shadow-lime-400/10 transition-all duration-300"
+                  className="group bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 lg:p-8 border border-cyan-400/20 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-400/10 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-lime-400/10 border border-lime-400/30 flex items-center justify-center mb-4 group-hover:bg-lime-400/20 transition-colors">
-                    <svg className="w-6 h-6 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center mb-4 group-hover:bg-cyan-400/20 transition-colors">
+                    <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-lime-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {feature.name}
                   </h3>
                   <p className="text-gray-400 text-sm leading-relaxed">
@@ -259,8 +259,8 @@ export default function MDRServicesPage() {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -270,7 +270,7 @@ export default function MDRServicesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="mb-12 text-center">
               <div className="inline-block mb-4">
-                <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/30 px-4 py-2 rounded-full">
+                <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/30 px-4 py-2 rounded-full">
                   Process
                 </span>
               </div>
@@ -286,11 +286,11 @@ export default function MDRServicesPage() {
               {MDR_CONTENT.process.steps.map((step, index) => (
                 <div
                   key={index}
-                  className="flex flex-col md:flex-row gap-6 bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 lg:p-8 border border-lime-400/20 hover:border-lime-400/50 transition-all duration-300"
+                  className="flex flex-col md:flex-row gap-6 bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 lg:p-8 border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-300"
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-lg bg-lime-400/10 border border-lime-400/30 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-lime-400">{step.step}</span>
+                    <div className="w-16 h-16 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-cyan-400">{step.step}</span>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -313,8 +313,8 @@ export default function MDRServicesPage() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -324,7 +324,7 @@ export default function MDRServicesPage() {
           <div className="max-w-6xl mx-auto">
             <div className="mb-12 text-center">
               <div className="inline-block mb-4">
-                <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/30 px-4 py-2 rounded-full">
+                <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/30 px-4 py-2 rounded-full">
                   Coverage
                 </span>
               </div>
@@ -340,7 +340,7 @@ export default function MDRServicesPage() {
               {MDR_CONTENT.coverage.areas.map((area, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 border border-lime-400/20 hover:border-lime-400/50 transition-all duration-300"
+                  className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-white mb-2">
                     {area.name}
@@ -360,8 +360,8 @@ export default function MDRServicesPage() {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -371,7 +371,7 @@ export default function MDRServicesPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 text-center">
               <div className="inline-block mb-4">
-                <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/30 px-4 py-2 rounded-full">
+                <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/30 px-4 py-2 rounded-full">
                   Benefits
                 </span>
               </div>
@@ -384,10 +384,10 @@ export default function MDRServicesPage() {
               {MDR_CONTENT.benefits.items.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 border border-lime-400/20"
+                  className="flex items-start gap-4 bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 border border-cyan-400/20"
                 >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-lime-400/20 border border-lime-400/40 flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-400/20 border border-cyan-400/40 flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -406,8 +406,8 @@ export default function MDRServicesPage() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -415,7 +415,7 @@ export default function MDRServicesPage() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-12 border border-lime-400/20">
+            <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-12 border border-cyan-400/20">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Enhance Your Security Posture?
               </h2>
@@ -424,7 +424,7 @@ export default function MDRServicesPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-lime-400/30 hover:scale-[1.02]"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.02]"
               >
                 Contact Sales
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -160,8 +160,8 @@ export default function Home() {
             className="w-full h-full"
             style={{
               backgroundImage: `
-                linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+                linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
               `,
               backgroundSize: '60px 60px'
             }}
@@ -187,7 +187,7 @@ export default function Home() {
             {/* CTA Button - Professional Styling */}
             <Link
               href={HERO_CONTENT.ctaLink}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-lime-400/30 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.02]"
             >
               {HERO_CONTENT.ctaText}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,8 +209,8 @@ export default function Home() {
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px'
           }} />
@@ -223,43 +223,43 @@ export default function Home() {
               0deg,
               transparent,
               transparent 2px,
-              rgba(132, 204, 22, 0.03) 2px,
-              rgba(132, 204, 22, 0.03) 4px
+              rgba(6, 182, 212, 0.03) 2px,
+              rgba(6, 182, 212, 0.03) 4px
             )`,
             animation: 'pulse-glow 3s ease-in-out infinite'
           }} />
         </div>
 
         {/* Corner Accents */}
-        <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-lime-400 opacity-30" />
-        <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-lime-400 opacity-30" />
-        <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-lime-400 opacity-30" />
-        <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-lime-400 opacity-30" />
+        <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-cyan-400 opacity-30" />
+        <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-cyan-400 opacity-30" />
+        <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-cyan-400 opacity-30" />
+        <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-cyan-400 opacity-30" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             {/* Professional Container with Tech Aesthetic */}
-            <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-8 lg:p-16 shadow-2xl border border-lime-400/20 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-8 lg:p-16 shadow-2xl border border-cyan-400/20 relative overflow-hidden">
               {/* Glowing Border Effect */}
               <div className="absolute inset-0 rounded-2xl opacity-50" style={{
-                background: `linear-gradient(135deg, rgba(132, 204, 22, 0.1) 0%, transparent 50%, rgba(132, 204, 22, 0.1) 100%)`,
+                background: `linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, transparent 50%, rgba(6, 182, 212, 0.1) 100%)`,
                 filter: 'blur(20px)'
               }} />
 
               {/* Inner Glow */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-lime-400/5 via-transparent to-lime-400/5 pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/5 via-transparent to-cyan-400/5 pointer-events-none" />
 
               <div className="relative z-10">
                 {/* Heading with Tech Typography */}
                 <div className="text-center mb-16 lg:mb-20">
                   <div className="inline-block mb-4">
-                    <span className="text-lime-400 text-sm font-mono tracking-widest uppercase">AI-Powered Security</span>
+                    <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase">AI-Powered Security</span>
                   </div>
                   <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
                     <span className="block">{STATS_CONTENT.heading.split('\n')[0]}</span>
-                    <span className="block text-lime-400">{STATS_CONTENT.heading.split('\n')[1]}</span>
+                    <span className="block text-cyan-400">{STATS_CONTENT.heading.split('\n')[1]}</span>
                   </h2>
-                  <div className="w-24 h-1 bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto mt-6" />
+                  <div className="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-6" />
                 </div>
 
                 {/* Statistics Grid with Professional Cards */}
@@ -267,12 +267,12 @@ export default function Home() {
                   {STATS_CONTENT.stats.map((stat, index) => (
                     <div
                       key={index}
-                      className="group relative bg-gradient-to-br from-gray-800/50 to-black/50 rounded-xl p-6 lg:p-8 border border-lime-400/20 hover:border-lime-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-lime-400/20"
+                      className="group relative bg-gradient-to-br from-gray-800/50 to-black/50 rounded-xl p-6 lg:p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/20"
                     >
                       {/* Animated Accent Bar */}
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-lime-400 via-lime-500 to-lime-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity" 
+                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity" 
                         style={{
-                          boxShadow: '0 0 10px rgba(132, 204, 22, 0.5)',
+                          boxShadow: '0 0 10px rgba(6, 182, 212, 0.5)',
                           animation: 'pulse-glow 2s ease-in-out infinite'
                         }}
                       />
@@ -280,7 +280,7 @@ export default function Home() {
                       {/* Tech Pattern Overlay */}
                       <div className="absolute inset-0 opacity-5 rounded-xl overflow-hidden">
                         <div className="absolute inset-0" style={{
-                          backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(132, 204, 22, 0.1) 50%, transparent 70%)`,
+                          backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
                           backgroundSize: '200% 200%',
                           animation: 'pulse-glow 4s ease-in-out infinite'
                         }} />
@@ -290,11 +290,11 @@ export default function Home() {
                       <div className="relative z-10 text-left">
                         {/* Stat Value with Tech Font */}
                         <div className="mb-4">
-                          <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 font-mono tracking-tight">
+                          <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400 font-mono tracking-tight">
                             {stat.value}
                           </div>
                           {/* Animated Underline */}
-                          <div className="h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent mt-2 w-0 group-hover:w-full transition-all duration-500" />
+                          <div className="h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mt-2 w-0 group-hover:w-full transition-all duration-500" />
                         </div>
                         
                         {/* Description */}
@@ -304,16 +304,16 @@ export default function Home() {
                       </div>
 
                       {/* Hover Glow Effect */}
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-lime-400/0 via-lime-400/5 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     </div>
                   ))}
                 </div>
 
                 {/* Bottom Tech Accent */}
                 <div className="mt-12 flex items-center justify-center space-x-4">
-                  <div className="h-px w-16 bg-gradient-to-r from-transparent to-lime-400" />
-                  <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
-                  <div className="h-px w-16 bg-gradient-to-l from-transparent to-lime-400" />
+                  <div className="h-px w-16 bg-gradient-to-r from-transparent to-cyan-400" />
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+                  <div className="h-px w-16 bg-gradient-to-l from-transparent to-cyan-400" />
                 </div>
               </div>
             </div>
@@ -327,8 +327,8 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -341,8 +341,8 @@ export default function Home() {
               0deg,
               transparent,
               transparent 3px,
-              rgba(132, 204, 22, 0.05) 3px,
-              rgba(132, 204, 22, 0.05) 6px
+              rgba(6, 182, 212, 0.05) 3px,
+              rgba(6, 182, 212, 0.05) 6px
             )`,
             animation: 'pulse-glow 4s ease-in-out infinite'
           }} />
@@ -358,7 +358,7 @@ export default function Home() {
               <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 {FEATURES_CONTENT.subtitle}
               </p>
-              <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto mt-8" />
+              <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-8" />
             </div>
 
             {/* Features Grid - Professional Cards */}
@@ -366,12 +366,12 @@ export default function Home() {
               {FEATURES_CONTENT.features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group relative bg-gradient-to-br from-gray-800/80 via-gray-900/90 to-black rounded-xl p-8 lg:p-10 border border-lime-400/20 hover:border-lime-400/50 hover:shadow-2xl hover:shadow-lime-400/20 transition-all duration-500 overflow-hidden"
+                  className="group relative bg-gradient-to-br from-gray-800/80 via-gray-900/90 to-black rounded-xl p-8 lg:p-10 border border-cyan-400/20 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-400/20 transition-all duration-500 overflow-hidden"
                 >
                   {/* Animated Accent Bar with Glow */}
-                  <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-lime-400 via-lime-500 to-lime-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
+                  <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
                     style={{
-                      boxShadow: '0 0 15px rgba(132, 204, 22, 0.6)',
+                      boxShadow: '0 0 15px rgba(6, 182, 212, 0.6)',
                       animation: 'pulse-glow 2s ease-in-out infinite'
                     }}
                   />
@@ -379,15 +379,15 @@ export default function Home() {
                   {/* Tech Pattern Overlay */}
                   <div className="absolute inset-0 opacity-5 rounded-xl overflow-hidden">
                     <div className="absolute inset-0" style={{
-                      backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(132, 204, 22, 0.1) 50%, transparent 70%)`,
+                      backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
                       backgroundSize: '200% 200%',
                       animation: 'pulse-glow 5s ease-in-out infinite'
                     }} />
                   </div>
 
                   {/* Corner Accents */}
-                  <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-lime-400/30 rounded-tr-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-lime-400/30 rounded-bl-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-cyan-400/30 rounded-tr-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-cyan-400/30 rounded-bl-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   
                   {/* Content */}
                   <div className="relative z-10 pl-6 text-left">
@@ -400,23 +400,23 @@ export default function Home() {
                             {/* Central hexagon */}
                             <polygon
                               points="50,20 70,30 70,50 50,60 30,50 30,30"
-                              fill="#84cc16"
-                              className="group-hover:fill-lime-500 transition-colors"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
                             />
                             {/* Radiating hexagons */}
-                            <polygon points="50,5 60,10 60,20 50,25 40,20 40,10" fill="#84cc16" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="80,30 90,35 90,45 80,50 70,45 70,35" fill="#84cc16" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="80,50 90,55 90,65 80,70 70,65 70,55" fill="#84cc16" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="50,75 60,80 60,90 50,95 40,90 40,80" fill="#84cc16" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="20,50 30,55 30,65 20,70 10,65 10,55" fill="#84cc16" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="20,30 30,35 30,45 20,50 10,45 10,35" fill="#84cc16" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
+                            <polygon points="50,5 60,10 60,20 50,25 40,20 40,10" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
+                            <polygon points="80,30 90,35 90,45 80,50 70,45 70,35" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
+                            <polygon points="80,50 90,55 90,65 80,70 70,65 70,55" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
+                            <polygon points="50,75 60,80 60,90 50,95 40,90 40,80" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
+                            <polygon points="20,50 30,55 30,65 20,70 10,65 10,55" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
+                            <polygon points="20,30 30,35 30,45 20,50 10,45 10,35" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
                             {/* Connection lines */}
-                            <line x1="50" y1="25" x2="50" y2="30" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="70" y1="40" x2="75" y2="40" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="70" y1="60" x2="75" y2="60" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="50" y1="70" x2="50" y2="75" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="30" y1="60" x2="25" y2="60" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="30" y1="40" x2="25" y2="40" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" />
+                            <line x1="50" y1="25" x2="50" y2="30" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
+                            <line x1="70" y1="40" x2="75" y2="40" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
+                            <line x1="70" y1="60" x2="75" y2="60" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
+                            <line x1="50" y1="70" x2="50" y2="75" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
+                            <line x1="30" y1="60" x2="25" y2="60" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
+                            <line x1="30" y1="40" x2="25" y2="40" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
                           </svg>
                         </div>
                       )}
@@ -424,7 +424,7 @@ export default function Home() {
                         <div className="relative w-16 h-16">
                           {/* Stopwatch Icon */}
                           <svg viewBox="0 0 100 100" className="w-full h-full">
-                            <circle cx="50" cy="50" r="35" fill="#84cc16" className="group-hover:fill-lime-500 transition-colors" />
+                            <circle cx="50" cy="50" r="35" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
                             <circle cx="50" cy="50" r="30" fill="none" stroke="#000" strokeWidth="3" />
                             <line x1="50" y1="50" x2="50" y2="35" stroke="#000" strokeWidth="3" strokeLinecap="round" />
                             <line x1="50" y1="50" x2="60" y2="50" stroke="#000" strokeWidth="2" strokeLinecap="round" />
@@ -432,7 +432,7 @@ export default function Home() {
                             {/* Arrow pointing right */}
                             <path d="M70 50 L80 50 M75 45 L80 50 L75 55" stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                             {/* Pipeline/Cylinder */}
-                            <rect x="15" y="45" width="8" height="10" rx="2" fill="#84cc16" opacity="0.6" />
+                            <rect x="15" y="45" width="8" height="10" rx="2" fill="#00f5ff" opacity="0.6" />
                             <line x1="15" y1="48" x2="23" y2="48" stroke="#000" strokeWidth="1" />
                             <line x1="15" y1="52" x2="23" y2="52" stroke="#000" strokeWidth="1" />
                           </svg>
@@ -442,19 +442,19 @@ export default function Home() {
                         <div className="relative w-16 h-16">
                           {/* Coverage/Network Icon */}
                           <svg viewBox="0 0 100 100" className="w-full h-full">
-                            <circle cx="50" cy="50" r="30" fill="none" stroke="#84cc16" strokeWidth="3" className="group-hover:stroke-lime-500 transition-colors" />
-                            <circle cx="30" cy="30" r="8" fill="#84cc16" className="group-hover:fill-lime-500 transition-colors" />
-                            <circle cx="70" cy="30" r="8" fill="#84cc16" className="group-hover:fill-lime-500 transition-colors" />
-                            <circle cx="30" cy="70" r="8" fill="#84cc16" className="group-hover:fill-lime-500 transition-colors" />
-                            <circle cx="70" cy="70" r="8" fill="#84cc16" className="group-hover:fill-lime-500 transition-colors" />
-                            <circle cx="50" cy="20" r="8" fill="#84cc16" className="group-hover:fill-lime-500 transition-colors" />
-                            <circle cx="50" cy="80" r="8" fill="#84cc16" className="group-hover:fill-lime-500 transition-colors" />
-                            <line x1="30" y1="30" x2="50" y2="50" stroke="#84cc16" strokeWidth="2" />
-                            <line x1="70" y1="30" x2="50" y2="50" stroke="#84cc16" strokeWidth="2" />
-                            <line x1="30" y1="70" x2="50" y2="50" stroke="#84cc16" strokeWidth="2" />
-                            <line x1="70" y1="70" x2="50" y2="50" stroke="#84cc16" strokeWidth="2" />
-                            <line x1="50" y1="20" x2="50" y2="50" stroke="#84cc16" strokeWidth="2" />
-                            <line x1="50" y1="80" x2="50" y2="50" stroke="#84cc16" strokeWidth="2" />
+                            <circle cx="50" cy="50" r="30" fill="none" stroke="#00f5ff" strokeWidth="3" className="group-hover:stroke-cyan-500 transition-colors" />
+                            <circle cx="30" cy="30" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
+                            <circle cx="70" cy="30" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
+                            <circle cx="30" cy="70" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
+                            <circle cx="70" cy="70" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
+                            <circle cx="50" cy="20" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
+                            <circle cx="50" cy="80" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
+                            <line x1="30" y1="30" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
+                            <line x1="70" y1="30" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
+                            <line x1="30" y1="70" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
+                            <line x1="70" y1="70" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
+                            <line x1="50" y1="20" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
+                            <line x1="50" y1="80" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
                           </svg>
                         </div>
                       )}
@@ -462,9 +462,9 @@ export default function Home() {
                         <div className="relative w-16 h-16">
                           {/* Shield/Battle Icon */}
                           <svg viewBox="0 0 100 100" className="w-full h-full">
-                            <path d="M50 20 L70 25 L75 45 L50 80 L25 45 L30 25 Z" fill="#84cc16" className="group-hover:fill-lime-500 transition-colors" />
+                            <path d="M50 20 L70 25 L75 45 L50 80 L25 45 L30 25 Z" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
                             <path d="M50 25 L65 29 L69 45 L50 75 L31 45 L35 29 Z" fill="#000" opacity="0.2" />
-                            <path d="M50 35 L58 37 L60 45 L50 60 L40 45 L42 37 Z" fill="#84cc16" />
+                            <path d="M50 35 L58 37 L60 45 L50 60 L40 45 L42 37 Z" fill="#00f5ff" />
                             <line x1="50" y1="20" x2="50" y2="35" stroke="#000" strokeWidth="2" />
                             <line x1="50" y1="60" x2="50" y2="80" stroke="#000" strokeWidth="2" />
                           </svg>
@@ -473,7 +473,7 @@ export default function Home() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-lime-400 transition-colors">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                       {feature.title}
                     </h3>
 
@@ -484,10 +484,10 @@ export default function Home() {
                   </div>
 
                   {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-lime-400/0 via-lime-400/5 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   
                   {/* Subtle Inner Glow */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-lime-400/0 via-transparent to-lime-400/0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/0 via-transparent to-cyan-400/0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none" />
                 </div>
               ))}
             </div>
@@ -503,8 +503,8 @@ export default function Home() {
           <div className="absolute inset-0 opacity-15">
             <div className="absolute inset-0" style={{
               backgroundImage: `
-                linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+                linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
               `,
               backgroundSize: '50px 50px'
             }} />
@@ -515,9 +515,9 @@ export default function Home() {
             <svg className="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
               <defs>
                 <pattern id="isometric-grid-enhanced" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 0 20 L 20 10 L 40 20 L 40 40 L 20 50 L 0 40 Z" fill="none" stroke="rgba(132, 204, 22, 0.4)" strokeWidth="0.5" />
-                  <path d="M 20 10 L 20 50" fill="none" stroke="rgba(132, 204, 22, 0.4)" strokeWidth="0.5" />
-                  <path d="M 0 20 L 40 20" fill="none" stroke="rgba(132, 204, 22, 0.4)" strokeWidth="0.5" />
+                  <path d="M 0 20 L 20 10 L 40 20 L 40 40 L 20 50 L 0 40 Z" fill="none" stroke="rgba(6, 182, 212, 0.4)" strokeWidth="0.5" />
+                  <path d="M 20 10 L 20 50" fill="none" stroke="rgba(6, 182, 212, 0.4)" strokeWidth="0.5" />
+                  <path d="M 0 20 L 40 20" fill="none" stroke="rgba(6, 182, 212, 0.4)" strokeWidth="0.5" />
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#isometric-grid-enhanced)" />
@@ -525,8 +525,8 @@ export default function Home() {
           </div>
 
           {/* Corner Accents */}
-          <div className="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-lime-400/40" />
-          <div className="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-lime-400/40" />
+          <div className="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-cyan-400/40" />
+          <div className="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-cyan-400/40" />
 
           {/* Content */}
           <div className="relative z-10 max-w-lg text-center lg:text-left">
@@ -541,7 +541,7 @@ export default function Home() {
             </p>
             
             {/* Accent Line */}
-            <div className="w-20 h-0.5 bg-gradient-to-r from-lime-400 to-transparent" />
+            <div className="w-20 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent" />
 
             {/* Enhanced Network Visualization */}
             <div className="relative w-full aspect-square max-w-md mx-auto lg:mx-0">
@@ -549,8 +549,8 @@ export default function Home() {
                 {/* Animated Background Glow */}
                 <defs>
                   <radialGradient id="nodeGlow">
-                    <stop offset="0%" stopColor="#84cc16" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="#84cc16" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#00f5ff" stopOpacity="0.8" />
+                    <stop offset="100%" stopColor="#00f5ff" stopOpacity="0" />
                   </radialGradient>
                 </defs>
                 
@@ -567,33 +567,33 @@ export default function Home() {
                   <g key={node.id}>
                     {/* Enhanced Radiating circles with glow */}
                     <circle cx={node.cx} cy={node.cy} r="50" fill="url(#nodeGlow)" opacity="0.2" />
-                    <circle cx={node.cx} cy={node.cy} r="45" fill="none" stroke="#84cc16" strokeWidth="2" opacity="0.4" />
-                    <circle cx={node.cx} cy={node.cy} r="35" fill="none" stroke="#84cc16" strokeWidth="1.5" opacity="0.5" />
-                    <circle cx={node.cx} cy={node.cy} r="25" fill="none" stroke="#84cc16" strokeWidth="1" opacity="0.6" />
+                    <circle cx={node.cx} cy={node.cy} r="45" fill="none" stroke="#00f5ff" strokeWidth="2" opacity="0.4" />
+                    <circle cx={node.cx} cy={node.cy} r="35" fill="none" stroke="#00f5ff" strokeWidth="1.5" opacity="0.5" />
+                    <circle cx={node.cx} cy={node.cy} r="25" fill="none" stroke="#00f5ff" strokeWidth="1" opacity="0.6" />
                     
                     {/* Enhanced 3D Cube Node */}
                     <g transform={`translate(${node.cx}, ${node.cy})`}>
                       {/* Cube faces with gradient */}
-                      <polygon points="-15,-15 15,-15 15,15 -15,15" fill="#84cc16" opacity="0.8" />
-                      <polygon points="15,-15 25,-5 25,15 15,15" fill="#a3e635" opacity="0.6" />
-                      <polygon points="15,-15 25,-5 5,-5 -15,-15" fill="#84cc16" opacity="0.7" />
+                      <polygon points="-15,-15 15,-15 15,15 -15,15" fill="#00f5ff" opacity="0.8" />
+                      <polygon points="15,-15 25,-5 25,15 15,15" fill="#33cfff" opacity="0.6" />
+                      <polygon points="15,-15 25,-5 5,-5 -15,-15" fill="#00f5ff" opacity="0.7" />
                       
                       {/* Enhanced Starburst icon */}
                       <g transform="translate(0, -20)">
                         <path d="M0,-8 L2,-2 L8,-2 L3,1 L5,7 L0,4 L-5,7 L-3,1 L-8,-2 L-2,-2 Z" fill="white" opacity="1" />
-                        <circle cx="0" cy="0" r="3" fill="#84cc16" />
+                        <circle cx="0" cy="0" r="3" fill="#00f5ff" />
                       </g>
                     </g>
                   </g>
                 ))}
 
                 {/* Enhanced Connection lines with animation effect */}
-                <line x1="200" y1="200" x2="200" y2="100" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="300" y2="150" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="300" y2="250" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="200" y2="300" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="100" y2="250" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="100" y2="150" stroke="#84cc16" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
+                <line x1="200" y1="200" x2="200" y2="100" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
+                <line x1="200" y1="200" x2="300" y2="150" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
+                <line x1="200" y1="200" x2="300" y2="250" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
+                <line x1="200" y1="200" x2="200" y2="300" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
+                <line x1="200" y1="200" x2="100" y2="250" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
+                <line x1="200" y1="200" x2="100" y2="150" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
               </svg>
             </div>
           </div>
@@ -604,7 +604,7 @@ export default function Home() {
           {/* Tech Pattern Background */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, lime 1px, transparent 0)`,
+              backgroundImage: `radial-gradient(circle at 2px 2px, #00f5ff 1px, transparent 0)`,
               backgroundSize: '30px 30px'
             }} />
           </div>
@@ -616,8 +616,8 @@ export default function Home() {
                 0deg,
                 transparent,
                 transparent 2px,
-                rgba(132, 204, 22, 0.03) 2px,
-                rgba(132, 204, 22, 0.03) 4px
+                rgba(6, 182, 212, 0.03) 2px,
+                rgba(6, 182, 212, 0.03) 4px
               )`,
               animation: 'pulse-glow 3s ease-in-out infinite'
             }} />
@@ -627,13 +627,13 @@ export default function Home() {
             {COMPREHENSIVE_SECURITY_CONTENT.features.map((feature, index) => (
               <div 
                 key={index} 
-                className="group relative bg-gradient-to-br from-gray-800/50 via-gray-900/70 to-black/50 rounded-xl p-6 lg:p-8 border border-lime-400/20 hover:border-lime-400/40 transition-all duration-300 hover:shadow-xl hover:shadow-lime-400/10"
+                className="group relative bg-gradient-to-br from-gray-800/50 via-gray-900/70 to-black/50 rounded-xl p-6 lg:p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10"
               >
                 {/* Animated Accent Bar with Glow */}
                 <div 
-                  className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-lime-400 via-lime-500 to-lime-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
+                  className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
                   style={{
-                    boxShadow: '0 0 10px rgba(132, 204, 22, 0.5)',
+                    boxShadow: '0 0 10px rgba(6, 182, 212, 0.5)',
                     animation: 'pulse-glow 2s ease-in-out infinite'
                   }}
                 />
@@ -641,7 +641,7 @@ export default function Home() {
                 {/* Tech Pattern Overlay */}
                 <div className="absolute inset-0 opacity-5 rounded-xl overflow-hidden">
                   <div className="absolute inset-0" style={{
-                    backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(132, 204, 22, 0.1) 50%, transparent 70%)`,
+                    backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
                     backgroundSize: '200% 200%',
                     animation: 'pulse-glow 4s ease-in-out infinite'
                   }} />
@@ -649,7 +649,7 @@ export default function Home() {
 
                 {/* Content */}
                 <div className="relative z-10 pl-6 text-left">
-                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-lime-400 transition-colors text-left">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors text-left">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-left">
@@ -658,7 +658,7 @@ export default function Home() {
                 </div>
 
                 {/* Hover Glow Effect */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-lime-400/0 via-lime-400/5 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
             ))}
           </div>
@@ -671,8 +671,8 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -685,31 +685,31 @@ export default function Home() {
               0deg,
               transparent,
               transparent 3px,
-              rgba(132, 204, 22, 0.03) 3px,
-              rgba(132, 204, 22, 0.03) 6px
+              rgba(6, 182, 212, 0.03) 3px,
+              rgba(6, 182, 212, 0.03) 6px
             )`,
             animation: 'pulse-glow 4s ease-in-out infinite'
           }} />
         </div>
 
         {/* Corner Accents */}
-        <div className="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-lime-400/30" />
-        <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-lime-400/30" />
-        <div className="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-lime-400/30" />
-        <div className="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-lime-400/30" />
+        <div className="absolute top-0 left-0 w-24 h-24 border-t-2 border-l-2 border-cyan-400/30" />
+        <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-cyan-400/30" />
+        <div className="absolute bottom-0 left-0 w-24 h-24 border-b-2 border-l-2 border-cyan-400/30" />
+        <div className="absolute bottom-0 right-0 w-24 h-24 border-b-2 border-r-2 border-cyan-400/30" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* Compact Professional Card Container */}
-            <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 lg:p-8 shadow-2xl border border-lime-400/20 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 lg:p-8 shadow-2xl border border-cyan-400/20 relative overflow-hidden">
               {/* Glowing Border Effect */}
               <div className="absolute inset-0 rounded-xl opacity-40" style={{
-                background: `linear-gradient(135deg, rgba(132, 204, 22, 0.08) 0%, transparent 50%, rgba(132, 204, 22, 0.08) 100%)`,
+                background: `linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, transparent 50%, rgba(6, 182, 212, 0.08) 100%)`,
                 filter: 'blur(15px)'
               }} />
 
               {/* Inner Glow */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-lime-400/3 via-transparent to-lime-400/3 pointer-events-none" />
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/3 via-transparent to-cyan-400/3 pointer-events-none" />
 
               <div className="relative z-10">
                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
@@ -717,7 +717,7 @@ export default function Home() {
                   <div className="lg:w-2/5 text-center lg:text-left">
                     {/* Badge */}
                     <div className="inline-block mb-4">
-                      <span className="text-lime-400 text-xs font-mono tracking-widest uppercase border border-lime-400/40 px-3 py-1 rounded-full">
+                      <span className="text-cyan-400 text-xs font-mono tracking-widest uppercase border border-cyan-400/40 px-3 py-1 rounded-full">
                         Live Dashboard
                       </span>
                     </div>
@@ -726,7 +726,7 @@ export default function Home() {
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight text-center lg:text-left">
                       <span className="block">{DEMO_SECTION_CONTENT.heading.line1}</span>
                       <span className="block">{DEMO_SECTION_CONTENT.heading.line2}</span>
-                      <span className="block text-lime-400">{DEMO_SECTION_CONTENT.heading.line3}</span>
+                      <span className="block text-cyan-400">{DEMO_SECTION_CONTENT.heading.line3}</span>
                     </h2>
 
                     {/* Description - Smaller */}
@@ -737,24 +737,24 @@ export default function Home() {
                     {/* CTA Button - Smaller */}
                     <Link
                       href={DEMO_SECTION_CONTENT.ctaButton.link}
-                      className="inline-block px-6 py-3 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-lime-400/50"
+                      className="inline-block px-6 py-3 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-cyan-400/50"
                     >
                       {DEMO_SECTION_CONTENT.ctaButton.text}
                     </Link>
 
                     {/* Accent Line */}
-                    <div className="w-16 h-0.5 bg-gradient-to-r from-lime-400 to-transparent mt-6 mx-auto lg:mx-0" />
+                    <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent mt-6 mx-auto lg:mx-0" />
                   </div>
 
                   {/* Right Column - Dashboard Image */}
                   <div className="lg:w-3/5 relative">
                     {/* Glow Effect Behind Image */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-lime-400/15 via-lime-400/8 to-transparent rounded-lg blur-2xl opacity-40" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/15 via-cyan-400/8 to-transparent rounded-lg blur-2xl opacity-40" />
                     
                     {/* Image Container with Professional Styling */}
-                    <div className="relative rounded-lg overflow-hidden border border-lime-400/30 shadow-xl hover:shadow-lime-400/20 transition-all duration-300 group">
+                    <div className="relative rounded-lg overflow-hidden border border-cyan-400/30 shadow-xl hover:shadow-cyan-400/20 transition-all duration-300 group">
                       {/* Top Glow Bar */}
-                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent opacity-40 z-10" />
+                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-40 z-10" />
                       
                       {/* Dashboard Image */}
             <Image
@@ -767,17 +767,17 @@ export default function Home() {
                       />
                       
                       {/* Overlay Glow on Hover */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-lime-400/0 via-lime-400/0 to-lime-400/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/0 via-cyan-400/0 to-cyan-400/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     </div>
 
                     {/* Bottom Tech Indicator - Smaller */}
                     <div className="mt-4 flex items-center justify-center space-x-3">
-                      <div className="h-px w-12 bg-gradient-to-r from-transparent to-lime-400" />
+                      <div className="h-px w-12 bg-gradient-to-r from-transparent to-cyan-400" />
                       <div className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-lime-400 rounded-full animate-pulse" />
-                        <span className="text-xs text-lime-400/80 font-mono uppercase tracking-wider text-[10px]">Live Data</span>
+                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse" />
+                        <span className="text-xs text-cyan-400/80 font-mono uppercase tracking-wider text-[10px]">Live Data</span>
                       </div>
-                      <div className="h-px w-12 bg-gradient-to-l from-transparent to-lime-400" />
+                      <div className="h-px w-12 bg-gradient-to-l from-transparent to-cyan-400" />
                     </div>
                   </div>
                 </div>

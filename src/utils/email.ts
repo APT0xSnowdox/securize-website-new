@@ -38,9 +38,12 @@ export async function sendPentestFormEmail(formData: PentestFormData) {
     }
 
     return await response.json();
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error sending email:', error);
-    throw error;
+    if (error instanceof Error) {
+      throw error;
+    }
+    throw new Error('Failed to send email');
   }
 }
 
@@ -60,7 +63,7 @@ function formatPentestEmail(formData: PentestFormData): string {
           padding: 20px;
         }
         .header {
-          background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+          background: linear-gradient(135deg, #00f5ff 0%, #009dff 100%);
           color: white;
           padding: 30px;
           border-radius: 8px 8px 0 0;

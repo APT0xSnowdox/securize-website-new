@@ -93,12 +93,12 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
           <p className="text-gray-400 mb-4">
             Could not find an article with the slug: 
-            <code className="bg-gray-800 text-lime-400 px-2 py-1 rounded-md ml-2">{slug}</code>
+            <code className="bg-gray-800 text-cyan-400 px-2 py-1 rounded-md ml-2">{slug}</code>
           </p>
           <p className="text-gray-400 mb-8">
             If you just created this post, please try refreshing the page or check the slug for typos in the admin panel.
           </p>
-          <Link href="/blog" className="text-lime-400 hover:text-lime-300">
+          <Link href="/blog" className="text-cyan-400 hover:text-cyan-300">
             Back to Blog
           </Link>
         </div>
@@ -119,7 +119,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       if (line.startsWith('```')) {
         if (inCodeBlock) {
           elements.push(
-            <pre key={`code-${index}`} className="bg-gray-900 border border-lime-400/20 rounded-lg p-4 overflow-x-auto my-4">
+            <pre key={`code-${index}`} className="bg-gray-900 border border-cyan-400/20 rounded-lg p-4 overflow-x-auto my-4">
               <code className="text-gray-300 text-sm font-mono">{codeBlockContent.join('\n')}</code>
             </pre>
           );
@@ -189,7 +189,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           currentParagraph = [];
         }
         elements.push(
-          <h3 key={`h3-${index}`} className="text-2xl font-bold text-lime-400 mb-3 mt-6">
+          <h3 key={`h3-${index}`} className="text-2xl font-bold text-cyan-400 mb-3 mt-6">
             {line.substring(4)}
           </h3>
         );
@@ -276,8 +276,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -288,7 +288,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Back Button */}
             <Link
               href="/blog"
-              className="inline-flex items-center text-lime-400 hover:text-lime-300 mb-8 transition-colors group"
+              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8 transition-colors group"
             >
               <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -298,7 +298,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Category */}
             <div className="mb-6">
-              <span className="text-lime-400 text-sm font-mono uppercase tracking-wider border border-lime-400/40 px-4 py-2 rounded-full">
+              <span className="text-cyan-400 text-sm font-mono uppercase tracking-wider border border-cyan-400/40 px-4 py-2 rounded-full">
                 {post.category}
               </span>
             </div>
@@ -311,13 +311,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-4 text-gray-400 mb-8 pb-8 border-b border-gray-800">
               <div className="flex items-center space-x-2">
-                <span className="text-lime-400 font-semibold">{post.author}</span>
-                <span className="text-lime-400/60">•</span>
+                <span className="text-cyan-400 font-semibold">{post.author}</span>
+                <span className="text-cyan-400/60">•</span>
                 <span>{post.authorRole}</span>
               </div>
-              <span className="text-lime-400/60">•</span>
+              <span className="text-cyan-400/60">•</span>
               <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-              <span className="text-lime-400/60">•</span>
+              <span className="text-cyan-400/60">•</span>
               <span>{post.readTime}</span>
             </div>
 
@@ -326,7 +326,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs text-lime-400/80 font-mono uppercase tracking-wider border border-lime-400/30 px-3 py-1 rounded-full"
+                  className="text-xs text-cyan-400/80 font-mono uppercase tracking-wider border border-cyan-400/30 px-3 py-1 rounded-full"
                 >
                   {tag}
                 </span>
@@ -335,7 +335,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Featured Image */}
             {post.image && (
-              <div className="mt-8 mb-8 rounded-xl overflow-hidden border border-lime-400/20">
+              <div className="mt-8 mb-8 rounded-xl overflow-hidden border border-cyan-400/20">
                 <div className="relative w-full h-96">
                   {post.image.startsWith('data:') ? (
                     <img
@@ -365,8 +365,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -376,7 +376,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="max-w-4xl mx-auto">
             {/* Article Content */}
             <article className="prose prose-invert prose-lg max-w-none">
-              <div className="bg-gradient-to-br from-gray-900/50 via-black/50 to-gray-900/50 rounded-xl p-8 lg:p-12 border border-lime-400/20">
+              <div className="bg-gradient-to-br from-gray-900/50 via-black/50 to-gray-900/50 rounded-xl p-8 lg:p-12 border border-cyan-400/20">
                 <div className="text-gray-300 leading-relaxed">
                   {renderContent(post.content)}
                 </div>
@@ -385,11 +385,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Author Section */}
             <div className="mt-16 pt-8 border-t border-gray-800">
-              <div className="bg-gradient-to-br from-gray-900/50 via-black/50 to-gray-900/50 rounded-xl p-8 border border-lime-400/20">
+              <div className="bg-gradient-to-br from-gray-900/50 via-black/50 to-gray-900/50 rounded-xl p-8 border border-cyan-400/20">
                 <div className="flex items-start space-x-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{post.author}</h3>
-                    <p className="text-lime-400 text-sm mb-4">{post.authorRole}</p>
+                    <p className="text-cyan-400 text-sm mb-4">{post.authorRole}</p>
                     <p className="text-gray-400 text-sm">
                       Expert in AI-powered penetration testing and cybersecurity innovation.
                     </p>
@@ -402,7 +402,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="mt-12 flex justify-between items-center">
               <Link
                 href="/blog"
-                className="inline-flex items-center text-lime-400 hover:text-lime-300 transition-colors group"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
               >
                 <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -411,7 +411,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-lime-400 text-black rounded-lg font-semibold hover:bg-lime-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-lime-400/50"
+                className="inline-flex items-center px-6 py-3 bg-cyan-400 text-black rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-cyan-400/50"
               >
                 Contact Us
               </Link>

@@ -174,8 +174,8 @@ export default function AdminBlogPage() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -186,14 +186,14 @@ export default function AdminBlogPage() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
                 <div className="inline-block mb-4">
-                  <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/40 px-4 py-2 rounded-full">
+                  <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/40 px-4 py-2 rounded-full">
                     Admin Panel
                   </span>
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-2">
                   Blog Management
                 </h1>
-                <p className="text-gray-400">Welcome, <span className="font-semibold text-lime-400">{session.user?.name}</span>!</p>
+                <p className="text-gray-400">Welcome, <span className="font-semibold text-cyan-400">{session.user?.name}</span>!</p>
               </div>
               <div className="flex flex-wrap gap-3">
                  <button
@@ -204,7 +204,7 @@ export default function AdminBlogPage() {
                 </button>
                 <button
                   onClick={handleCreate}
-                  className="px-6 py-3 bg-lime-400 text-black rounded-lg font-semibold hover:bg-lime-300 transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="px-6 py-3 bg-cyan-400 text-black rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   + New Article
                 </button>
@@ -230,7 +230,7 @@ export default function AdminBlogPage() {
                 {/* Actions Bar */}
                 <div className="mb-8 flex flex-wrap gap-4 items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <span className="text-gray-400">Total Articles: <span className="text-lime-400 font-semibold">{posts.length}</span></span>
+                    <span className="text-gray-400">Total Articles: <span className="text-cyan-400 font-semibold">{posts.length}</span></span>
                   </div>
                   <div className="flex gap-3">
                     <label className="px-4 py-2 bg-gray-800 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors border border-gray-700 cursor-pointer">
@@ -252,21 +252,21 @@ export default function AdminBlogPage() {
                 </div>
 
                 {/* Vercel Deployment Info */}
-                <div className="mb-8 p-4 bg-lime-400/10 border border-lime-400/30 rounded-lg">
+                <div className="mb-8 p-4 bg-cyan-400/10 border border-cyan-400/30 rounded-lg">
                   <p className="text-sm text-gray-300">
-                    <span className="text-lime-400 font-semibold">Note for Vercel Deployment:</span> Posts saved in localStorage won't persist on Vercel. 
-                    After creating articles, export them using the "Export JSON" button and import them after deployment, or add them to <code className="text-lime-400">src/data/blog.ts</code>.
+                    <span className="text-cyan-400 font-semibold">Note for Vercel Deployment:</span> Posts saved in localStorage won't persist on Vercel. 
+                    After creating articles, export them using the "Export JSON" button and import them after deployment, or add them to <code className="text-cyan-400">src/data/blog.ts</code>.
                   </p>
                 </div>
 
                 {/* Articles List */}
                 <div className="grid grid-cols-1 gap-6">
                   {posts.length === 0 ? (
-                    <div className="text-center py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl border border-lime-400/20">
+                    <div className="text-center py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl border border-cyan-400/20">
                       <p className="text-gray-400 text-lg mb-4">No articles yet</p>
                       <button
                         onClick={handleCreate}
-                        className="px-6 py-3 bg-lime-400 text-black rounded-lg font-semibold hover:bg-lime-300 transition-all duration-300"
+                        className="px-6 py-3 bg-cyan-400 text-black rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300"
                       >
                         Create Your First Article
                       </button>
@@ -275,13 +275,13 @@ export default function AdminBlogPage() {
                     posts.map((post) => (
                       <div
                         key={post.slug}
-                        className="group bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 border border-lime-400/20 hover:border-lime-400/50 transition-all duration-300"
+                        className="group bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-300"
                       >
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-3">
                               {post.featured && (
-                                <span className="text-xs text-lime-400 font-mono uppercase border border-lime-400/40 px-2 py-1 rounded">
+                                <span className="text-xs text-cyan-400 font-mono uppercase border border-cyan-400/40 px-2 py-1 rounded">
                                   Featured
                                 </span>
                               )}
@@ -289,7 +289,7 @@ export default function AdminBlogPage() {
                                 {post.category}
                               </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                               {post.title}
                             </h3>
                             <p className="text-gray-400 mb-4 line-clamp-2">{post.excerpt}</p>
@@ -304,7 +304,7 @@ export default function AdminBlogPage() {
                               {post.tags.slice(0, 3).map((tag) => (
                                 <span
                                   key={tag}
-                                  className="text-xs text-lime-400/80 font-mono uppercase border border-lime-400/20 px-2 py-1 rounded"
+                                  className="text-xs text-cyan-400/80 font-mono uppercase border border-cyan-400/20 px-2 py-1 rounded"
                                 >
                                   {tag}
                                 </span>
@@ -321,7 +321,7 @@ export default function AdminBlogPage() {
                             </Link>
                             <button
                               onClick={() => handleEdit(post)}
-                              className="px-4 py-2 bg-lime-400/20 text-lime-400 rounded-lg font-medium hover:bg-lime-400/30 transition-colors border border-lime-400/30"
+                              className="px-4 py-2 bg-cyan-400/20 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/30 transition-colors border border-cyan-400/30"
                             >
                               Edit
                             </button>
@@ -467,7 +467,7 @@ function ArticleForm({
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-8 border border-lime-400/20">
+    <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-8 border border-cyan-400/20">
       <h2 className="text-3xl font-bold text-white mb-6">
         {isCreating ? 'Create New Article' : 'Edit Article'}
       </h2>
@@ -484,7 +484,7 @@ function ArticleForm({
               name="slug"
               value={formData.slug}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               placeholder="article-url-slug"
               required
             />
@@ -501,7 +501,7 @@ function ArticleForm({
               name="title"
               value={formData.title}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               placeholder="Article Title"
               required
             />
@@ -517,7 +517,7 @@ function ArticleForm({
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               placeholder="AI & Security"
             />
           </div>
@@ -532,7 +532,7 @@ function ArticleForm({
               name="date"
               value={formData.date}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
             />
           </div>
 
@@ -546,7 +546,7 @@ function ArticleForm({
               name="author"
               value={formData.author}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               placeholder="Author Name"
             />
           </div>
@@ -561,7 +561,7 @@ function ArticleForm({
               name="authorRole"
               value={formData.authorRole}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               placeholder="Founder and CEO"
             />
           </div>
@@ -576,7 +576,7 @@ function ArticleForm({
               name="readTime"
               value={formData.readTime}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               placeholder="5 min read"
             />
           </div>
@@ -589,7 +589,7 @@ function ArticleForm({
                 name="featured"
                 checked={formData.featured}
                 onChange={handleChange}
-                className="w-5 h-5 bg-gray-900 border-gray-700 rounded text-lime-400 focus:ring-lime-400 focus:ring-2"
+                className="w-5 h-5 bg-gray-900 border-gray-700 rounded text-cyan-400 focus:ring-cyan-400 focus:ring-2"
               />
               <span className="ml-3 text-gray-300">Featured Article</span>
             </label>
@@ -608,7 +608,7 @@ function ArticleForm({
                 name="image"
                 value={formData.image || ''}
                 onChange={handleChange}
-                className="flex-1 px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+                className="flex-1 px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
                 placeholder="/image.jpg or https://example.com/image.jpg"
               />
               <label className="px-4 py-3 bg-gray-800 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors border border-gray-700 cursor-pointer">
@@ -622,7 +622,7 @@ function ArticleForm({
               </label>
             </div>
             {imagePreview && (
-              <div className="relative w-full h-64 rounded-lg overflow-hidden border border-lime-400/20">
+              <div className="relative w-full h-64 rounded-lg overflow-hidden border border-cyan-400/20">
                 <img
                   src={imagePreview}
                   alt="Preview"
@@ -656,7 +656,7 @@ function ArticleForm({
             value={formData.excerpt}
             onChange={handleChange}
             rows={3}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
             placeholder="Brief description of the article"
           />
         </div>
@@ -671,7 +671,7 @@ function ArticleForm({
             value={formData.content}
             onChange={handleChange}
             rows={20}
-            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400 font-mono text-sm"
+            className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 font-mono text-sm"
             placeholder="# Article Title
 
 Your article content here. Use markdown-style formatting:
@@ -702,13 +702,13 @@ Regular paragraphs..."
               value={tagInput}
               onChange={(e) => setTagInput(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
-              className="flex-1 px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-lime-400"
+              className="flex-1 px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               placeholder="Add a tag and press Enter"
             />
             <button
               type="button"
               onClick={handleAddTag}
-              className="px-4 py-2 bg-lime-400 text-black rounded-lg font-medium hover:bg-lime-300 transition-colors"
+              className="px-4 py-2 bg-cyan-400 text-black rounded-lg font-medium hover:bg-cyan-300 transition-colors"
             >
               Add
             </button>
@@ -717,13 +717,13 @@ Regular paragraphs..."
             {formData.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center gap-2 px-3 py-1 bg-lime-400/20 text-lime-400 rounded-lg border border-lime-400/30"
+                className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-lg border border-cyan-400/30"
               >
                 {tag}
                 <button
                   type="button"
                   onClick={() => handleRemoveTag(tag)}
-                  className="text-lime-400 hover:text-lime-300"
+                  className="text-cyan-400 hover:text-cyan-300"
                 >
                   ×
                 </button>
@@ -736,7 +736,7 @@ Regular paragraphs..."
         <div className="flex gap-4 pt-4 border-t border-gray-800">
           <button
             type="submit"
-            className="px-8 py-3 bg-lime-400 text-black rounded-lg font-semibold hover:bg-lime-300 transition-all duration-300 hover:scale-105 shadow-lg"
+            className="px-8 py-3 bg-cyan-400 text-black rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 hover:scale-105 shadow-lg"
           >
             {isCreating ? 'Create Article' : 'Save Changes'}
           </button>

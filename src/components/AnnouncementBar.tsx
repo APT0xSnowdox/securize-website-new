@@ -8,7 +8,7 @@ export default function AnnouncementBar() {
           <div className="flex items-center space-x-3 text-sm text-center">
             {/* Megaphone Icon */}
             <svg 
-              className="w-5 h-5 text-lime-400 flex-shrink-0" 
+              className="w-5 h-5 text-cyan-400 flex-shrink-0" 
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -20,7 +20,7 @@ export default function AnnouncementBar() {
               Security shouldn't wait for scheduling.{' '}
               <Link 
                 href="/story" 
-                className="text-lime-400 hover:text-lime-300 underline transition-colors"
+                className="text-cyan-400 hover:text-cyan-300 underline transition-colors"
               >
                 Read the story
               </Link>

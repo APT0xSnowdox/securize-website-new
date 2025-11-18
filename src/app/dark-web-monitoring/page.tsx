@@ -100,8 +100,8 @@ export default function DarkWebMonitoringPage() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -113,7 +113,7 @@ export default function DarkWebMonitoringPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-6">
-              <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/40 px-4 py-2 rounded-full">
+              <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/40 px-4 py-2 rounded-full">
                 Threat Intelligence Service
               </span>
             </div>
@@ -125,7 +125,7 @@ export default function DarkWebMonitoringPage() {
             </p>
             <Link
               href={DARK_WEB_CONTENT.hero.ctaLink}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-lime-400/30 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.02]"
             >
               {DARK_WEB_CONTENT.hero.ctaText}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,8 +141,8 @@ export default function DarkWebMonitoringPage() {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -166,8 +166,8 @@ export default function DarkWebMonitoringPage() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -180,8 +180,8 @@ export default function DarkWebMonitoringPage() {
               0deg,
               transparent,
               transparent 3px,
-              rgba(132, 204, 22, 0.03) 3px,
-              rgba(132, 204, 22, 0.03) 6px
+              rgba(6, 182, 212, 0.03) 3px,
+              rgba(6, 182, 212, 0.03) 6px
             )`,
             animation: 'pulse-glow 4s ease-in-out infinite'
           }} />
@@ -191,7 +191,7 @@ export default function DarkWebMonitoringPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 lg:mb-20">
               <div className="inline-block mb-4">
-                <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/30 px-4 py-2 rounded-full">
+                <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/30 px-4 py-2 rounded-full">
                   Intelligence Collection
                 </span>
               </div>
@@ -201,7 +201,7 @@ export default function DarkWebMonitoringPage() {
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
                 {DARK_WEB_CONTENT.methods.subtitle}
               </p>
-              <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto mt-6" />
+              <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-6" />
             </div>
 
             {/* Methods Grid */}
@@ -209,12 +209,12 @@ export default function DarkWebMonitoringPage() {
               {DARK_WEB_CONTENT.methods.techniques.map((method, index) => (
                 <div
                   key={index}
-                  className="group relative bg-gradient-to-br from-gray-800/80 via-gray-900/90 to-black rounded-xl p-8 lg:p-10 border border-lime-400/20 hover:border-lime-400/50 hover:shadow-2xl hover:shadow-lime-400/20 transition-all duration-500 overflow-hidden"
+                  className="group relative bg-gradient-to-br from-gray-800/80 via-gray-900/90 to-black rounded-xl p-8 lg:p-10 border border-cyan-400/20 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-400/20 transition-all duration-500 overflow-hidden"
                 >
                   {/* Animated Accent Bar */}
-                  <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-lime-400 via-lime-500 to-lime-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
+                  <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
                     style={{
-                      boxShadow: '0 0 15px rgba(132, 204, 22, 0.6)',
+                      boxShadow: '0 0 15px rgba(6, 182, 212, 0.6)',
                       animation: 'pulse-glow 2s ease-in-out infinite'
                     }}
                   />
@@ -222,7 +222,7 @@ export default function DarkWebMonitoringPage() {
                   {/* Tech Pattern Overlay */}
                   <div className="absolute inset-0 opacity-5 rounded-xl overflow-hidden">
                     <div className="absolute inset-0" style={{
-                      backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(132, 204, 22, 0.1) 50%, transparent 70%)`,
+                      backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
                       backgroundSize: '200% 200%',
                       animation: 'pulse-glow 5s ease-in-out infinite'
                     }} />
@@ -232,15 +232,15 @@ export default function DarkWebMonitoringPage() {
                   <div className="relative z-10 pl-6 text-left">
                     {/* Icon Placeholder */}
                     <div className="mb-6">
-                      <div className="w-16 h-16 rounded-lg bg-lime-400/10 border border-lime-400/30 flex items-center justify-center">
-                        <svg className="w-8 h-8 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-16 h-16 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center">
+                        <svg className="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-lime-400 transition-colors">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                       {method.name}
                     </h3>
 
@@ -251,7 +251,7 @@ export default function DarkWebMonitoringPage() {
                   </div>
 
                   {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-lime-400/0 via-lime-400/5 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </div>
               ))}
             </div>
@@ -277,12 +277,12 @@ export default function DarkWebMonitoringPage() {
                 <div key={index} className="relative">
                   <div className="flex items-start gap-6">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-lime-400 to-lime-600 flex items-center justify-center text-black font-bold text-xl border-4 border-black shadow-lg">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-black font-bold text-xl border-4 border-black shadow-lg">
                         {step.step}
                       </div>
                     </div>
                     <div className="flex-1 pt-2">
-                      <h3 className="text-2xl font-bold text-lime-400 mb-3">
+                      <h3 className="text-2xl font-bold text-cyan-400 mb-3">
                         {step.name}
                       </h3>
                       <p className="text-gray-300 leading-relaxed">
@@ -291,7 +291,7 @@ export default function DarkWebMonitoringPage() {
                     </div>
                   </div>
                   {index < DARK_WEB_CONTENT.process.steps.length - 1 && (
-                    <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-lime-400/50 to-transparent" />
+                    <div className="absolute left-8 top-16 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 to-transparent" />
                   )}
                 </div>
               ))}
@@ -311,8 +311,8 @@ export default function DarkWebMonitoringPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {DARK_WEB_CONTENT.benefits.items.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-gray-800/50 to-black/50 rounded-xl border border-lime-400/20">
-                  <svg className="w-6 h-6 text-lime-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div key={index} className="flex items-start gap-4 p-6 bg-gradient-to-br from-gray-800/50 to-black/50 rounded-xl border border-cyan-400/20">
+                  <svg className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-lg text-gray-300">{item}</span>
@@ -324,7 +324,7 @@ export default function DarkWebMonitoringPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden border-t border-lime-400/20">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden border-t border-cyan-400/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -335,7 +335,7 @@ export default function DarkWebMonitoringPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-lime-400/30 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.02]"
             >
               Contact Us to Get Started
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

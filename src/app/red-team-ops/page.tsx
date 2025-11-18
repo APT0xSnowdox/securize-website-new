@@ -54,14 +54,14 @@ export default function RedTeamOpsPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden border-b border-lime-400/20">
+      <section className="relative pt-32 lg:pt-40 pb-20 lg:pb-32 overflow-hidden border-b border-cyan-400/20">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-6">
-              <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/40 px-4 py-2 rounded-full">
+              <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/40 px-4 py-2 rounded-full">
                 Offensive Security Service
               </span>
             </div>
@@ -73,7 +73,7 @@ export default function RedTeamOpsPage() {
             </p>
             <Link
               href={RED_TEAM_CONTENT.hero.ctaLink}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-lime-400/30 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.02]"
             >
               {RED_TEAM_CONTENT.hero.ctaText}
             </Link>
@@ -105,7 +105,7 @@ export default function RedTeamOpsPage() {
             <ul className="space-y-4 text-left max-w-2xl mx-auto">
               {RED_TEAM_CONTENT.benefits.items.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <svg className="w-6 h-6 text-lime-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <svg className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   <span className="text-lg text-gray-300">{item}</span>
                 </li>
               ))}

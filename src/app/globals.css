@@ -119,17 +119,19 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #84cc16;
+  background: linear-gradient(135deg, #00f5ff 0%, #00c3ff 100%);
   border-radius: 4px;
+  box-shadow: 0 0 12px rgba(0, 207, 255, 0.6);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a3e635;
+  background: linear-gradient(135deg, #33cfff 0%, #00f5ff 100%);
+  box-shadow: 0 0 16px rgba(0, 245, 255, 0.8);
 }
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #84cc16 0%, #a3e635 100%);
+  background: linear-gradient(135deg, #00f5ff 0%, #33cfff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

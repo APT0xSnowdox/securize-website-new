@@ -35,8 +35,8 @@ export default function About() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -46,7 +46,7 @@ export default function About() {
           <div className="max-w-5xl mx-auto text-center">
             {/* Badge */}
             <div className="inline-block mb-6">
-              <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/40 px-4 py-2 rounded-full">
+              <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/40 px-4 py-2 rounded-full">
                 About Securize
               </span>
             </div>
@@ -58,14 +58,14 @@ export default function About() {
 
             {/* Description */}
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-14 leading-relaxed max-w-4xl mx-auto">
-              Securize is <span className="text-lime-400 font-semibold">Asia's first AI-powered penetration testing platform</span>. Since September 2025, we've discovered <span className="text-lime-400 font-semibold">500+ application vulnerabilities</span> using autonomous AI agents that deliver human-level security testing at machine speed.
+              Securize is <span className="text-cyan-400 font-semibold">Asia's first AI-powered penetration testing platform</span>. Since September 2025, we've discovered <span className="text-cyan-400 font-semibold">500+ application vulnerabilities</span> using autonomous AI agents that deliver human-level security testing at machine speed.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/careers"
-                className="group px-8 py-4 bg-lime-400 text-black rounded-lg font-semibold text-base hover:bg-lime-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-lime-400/50 hover:scale-105 active:scale-100"
+                className="group px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-400/50 hover:scale-105 active:scale-100"
               >
                 See open positions
               </Link>
@@ -78,7 +78,7 @@ export default function About() {
             </div>
 
             {/* Accent Line */}
-            <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto mt-12" />
+            <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-12" />
           </div>
         </div>
       </section>
@@ -89,8 +89,8 @@ export default function About() {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(132, 204, 22, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(132, 204, 22, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px'
           }} />
@@ -103,25 +103,25 @@ export default function About() {
               0deg,
               transparent,
               transparent 3px,
-              rgba(132, 204, 22, 0.03) 3px,
-              rgba(132, 204, 22, 0.03) 6px
+              rgba(6, 182, 212, 0.03) 3px,
+              rgba(6, 182, 212, 0.03) 6px
             )`,
             animation: 'pulse-glow 4s ease-in-out infinite'
           }} />
         </div>
 
         {/* Corner Accents */}
-        <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-lime-400 opacity-30" />
-        <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-lime-400 opacity-30" />
-        <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-lime-400 opacity-30" />
-        <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-lime-400 opacity-30" />
+        <div className="absolute top-0 left-0 w-32 h-32 border-t-2 border-l-2 border-cyan-400 opacity-30" />
+        <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-cyan-400 opacity-30" />
+        <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-cyan-400 opacity-30" />
+        <div className="absolute bottom-0 right-0 w-32 h-32 border-b-2 border-r-2 border-cyan-400 opacity-30" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16 lg:mb-20">
               <div className="inline-block mb-4">
-                <span className="text-lime-400 text-sm font-mono tracking-widest uppercase border border-lime-400/30 px-4 py-2 rounded-full">
+                <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase border border-cyan-400/30 px-4 py-2 rounded-full">
                   Our Team
                 </span>
               </div>
@@ -131,7 +131,7 @@ export default function About() {
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
                  security researchers and developers building the future of AI-powered penetration testing
               </p>
-              <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent mx-auto mt-6" />
+              <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-6" />
             </div>
 
             {/* Team Grid */}
@@ -140,10 +140,10 @@ export default function About() {
               <div className="group text-center">
                 <div className="relative w-56 h-56 mx-auto mb-6">
                   {/* Glow Effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-lime-400/20 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400/20 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* Image Container */}
-                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-lime-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-lime-400/20">
+                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-cyan-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-cyan-400/20">
                     <Image
                       src="/founder.jpg"
                       alt="Nathaneal Meththananda"
@@ -154,9 +154,9 @@ export default function About() {
                   </div>
                   
                   {/* Status Indicator */}
-                  <div className="absolute bottom-2 right-2 w-4 h-4 bg-lime-400 rounded-full border-2 border-black shadow-lg" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 bg-cyan-400 rounded-full border-2 border-black shadow-lg" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   Nathaneal Meththananda
                 </h3>
                 <p className="text-gray-400 text-lg">Founder and CEO</p>
@@ -166,10 +166,10 @@ export default function About() {
               <div className="group text-center">
                 <div className="relative w-56 h-56 mx-auto mb-6">
                   {/* Glow Effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-lime-400/20 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400/20 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* Image Container */}
-                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-lime-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-lime-400/20">
+                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-cyan-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-cyan-400/20">
                     <Image
                       src="/chira.jpeg"
                       alt="Chirath Abeymanna"
@@ -182,9 +182,9 @@ export default function About() {
                   </div>
                   
                   {/* Status Indicator */}
-                  <div className="absolute bottom-2 right-2 w-4 h-4 bg-lime-400 rounded-full border-2 border-black shadow-lg" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 bg-cyan-400 rounded-full border-2 border-black shadow-lg" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   Chirath Abeymanna
                 </h3>
                 <p className="text-gray-400 text-lg">CTO</p>
@@ -194,10 +194,10 @@ export default function About() {
               <div className="group text-center">
                 <div className="relative w-56 h-56 mx-auto mb-6">
                   {/* Glow Effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-lime-400/20 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400/20 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* Image Container */}
-                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-lime-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-lime-400/20">
+                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-cyan-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-cyan-400/20">
                     <Image
                       src="/amika-full.jpg"
                       alt="Amika Deshapriya"
@@ -208,9 +208,9 @@ export default function About() {
                   </div>
                   
                   {/* Status Indicator */}
-                  <div className="absolute bottom-2 right-2 w-4 h-4 bg-lime-400 rounded-full border-2 border-black shadow-lg" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 bg-cyan-400 rounded-full border-2 border-black shadow-lg" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   Amika Deshapriya
                 </h3>
                 <p className="text-gray-400 text-lg">Head of AI</p>
@@ -220,10 +220,10 @@ export default function About() {
               <div className="group text-center">
                 <div className="relative w-56 h-56 mx-auto mb-6">
                   {/* Glow Effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-lime-400/20 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400/20 to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* Image Container */}
-                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-lime-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-lime-400/20">
+                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-gray-700 group-hover:border-cyan-400/50 transition-all duration-300 shadow-xl group-hover:shadow-2xl group-hover:shadow-cyan-400/20">
                     <Image
                       src="/pamali.jpeg"
                       alt="Pamali Rodrigo"
@@ -234,9 +234,9 @@ export default function About() {
                   </div>
                   
                   {/* Status Indicator */}
-                  <div className="absolute bottom-2 right-2 w-4 h-4 bg-lime-400 rounded-full border-2 border-black shadow-lg" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 bg-cyan-400 rounded-full border-2 border-black shadow-lg" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-lime-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   Pamali Rodrigo
                 </h3>
                 <p className="text-gray-400 text-lg">Head of Engineering</p>
@@ -245,9 +245,9 @@ export default function About() {
 
             {/* Bottom Accent */}
             <div className="mt-16 flex items-center justify-center space-x-4">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-lime-400" />
-              <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-lime-400" />
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-cyan-400" />
+              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-cyan-400" />
             </div>
           </div>
         </div>

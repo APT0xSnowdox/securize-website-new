@@ -56,7 +56,7 @@ export default function Header() {
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-lime-400/10 rounded-lg transition-all duration-200"
+                      className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-cyan-400/10 rounded-lg transition-all duration-200"
                     >
                       {service.name}
                     </Link>
@@ -84,7 +84,7 @@ export default function Header() {
             </Link>
             <Link
               href="/pentest"
-              className="px-5 py-2.5 bg-lime-400 text-black rounded-lg font-semibold hover:bg-lime-300 transition-all duration-200 text-sm lg:text-base"
+              className="px-5 py-2.5 bg-cyan-400 text-black rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-200 text-sm lg:text-base"
             >
               Start a Pentest
             </Link>
@@ -136,12 +136,12 @@ export default function Header() {
                 <svg className={`w-5 h-5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
               </button>
               {isServicesOpen && (
-                <div className="pl-4 mt-2 space-y-2 border-l-2 border-lime-400/20">
+                <div className="pl-4 mt-2 space-y-2 border-l-2 border-cyan-400/20">
                   {services.map((service) => (
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="block px-3 py-2 text-gray-400 hover:text-white hover:bg-lime-400/10 rounded-md transition-all duration-200"
+                      className="block px-3 py-2 text-gray-400 hover:text-white hover:bg-cyan-400/10 rounded-md transition-all duration-200"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {service.name}
@@ -173,7 +173,7 @@ export default function Header() {
             </Link>
             <Link
               href="/pentest"
-              className="block px-5 py-2.5 bg-lime-400 text-black rounded-lg font-semibold hover:bg-lime-300 transition-all duration-200 text-center"
+              className="block px-5 py-2.5 bg-cyan-400 text-black rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-200 text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Start a Pentest
