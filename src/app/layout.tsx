@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AuthProvider from '@/components/AuthProvider';
+import AuthProvider from "@/components/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Securize - AI-Powered Penetration Testing Platform",
-  description: "Securize is the leading AI-powered penetration testing platform that delivers enterprise-grade security testing at machine speed. Discover vulnerabilities faster with autonomous AI agents.",
-  keywords: "AI pentesting, penetration testing, cybersecurity, vulnerability assessment, automated security testing, AI security platform",
+  description:
+    "Securize is the leading AI-powered penetration testing platform that delivers enterprise-grade security testing at machine speed. Discover vulnerabilities faster with autonomous AI agents.",
+  keywords:
+    "AI pentesting, penetration testing, cybersecurity, vulnerability assessment, automated security testing, AI security platform",
 };
 
 export default function RootLayout({
@@ -27,13 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-gray-950 text-gray-100">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" className="text-gray-200 ">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <AuthProvider>
           <Header />
-          <main className="min-h-screen pt-20 sm:pt-24 lg:pt-28">
-            {children}
-          </main>
+          <main className="min-h-screen ">{children}</main>
           <Footer />
         </AuthProvider>
       </body>

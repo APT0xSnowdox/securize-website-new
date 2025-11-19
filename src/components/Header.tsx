@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const services = [
-  { name: 'Red Team Ops', href: '/red-team-ops' },
-  { name: 'MDR', href: '/mdr-services' },
-  { name: 'Dark Web Monitoring', href: '/dark-web-monitoring' },
-  { name: 'PDPA and ISO 27001', href: '/services#pdpa-iso-27001' },
+  { name: "Red Team Ops", href: "/red-team-ops" },
+  { name: "MDR", href: "/mdr-services" },
+  { name: "Dark Web Monitoring", href: "/dark-web-monitoring" },
+  { name: "PDPA and ISO 27001", href: "/services#pdpa-iso-27001" },
 ];
 
 export default function Header() {
@@ -19,9 +19,8 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 pt-4 px-4 sm:px-6 lg:px-8">
       <nav className="container mx-auto max-w-5xl">
         <div className="flex items-center justify-between relative bg-gray-900/90 backdrop-blur-md rounded-2xl pl-40 md:pl-52 lg:pl-64 pr-6 py-4 lg:px-8 lg:py-6 shadow-2xl border border-gray-800/50">
-          {/* Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="absolute left-4 md:left-6 lg:left-8 top-1/2 -translate-y-1/2 flex items-center hover:opacity-80 transition-opacity duration-200 z-10"
           >
             <Image
@@ -34,21 +33,30 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4 lg:space-x-5 ml-auto">
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               className="px-3 py-2 text-gray-400 hover:text-gray-200 transition-all duration-200 font-medium text-sm lg:text-base"
             >
               About
             </Link>
             {/* Services Dropdown */}
             <div className="relative group">
-              <div
-                className="px-3 py-2 text-gray-400 hover:text-gray-200 transition-all duration-200 font-medium text-sm lg:text-base flex items-center gap-1 cursor-pointer"
-              >
+              <div className="px-3 py-2 text-gray-400 hover:text-gray-200 transition-all duration-200 font-medium text-sm lg:text-base flex items-center gap-1 cursor-pointer">
                 Services
-                <svg className="w-4 h-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                <svg
+                  className="w-4 h-4 group-hover:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
               </div>
               <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 bg-gray-900/90 backdrop-blur-md rounded-xl shadow-2xl border border-gray-800/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
                 <div className="p-2 pt-0">
@@ -64,14 +72,14 @@ export default function Header() {
                 </div>
               </div>
             </div>
-            <Link 
-              href="/blog" 
+            <Link
+              href="/blog"
               className="px-3 py-2 text-gray-400 hover:text-gray-200 transition-all duration-200 font-medium text-sm lg:text-base"
             >
               Blog
             </Link>
-            <Link 
-              href="/careers" 
+            <Link
+              href="/careers"
               className="px-3 py-2 text-gray-400 hover:text-gray-200 transition-all duration-200 font-medium text-sm lg:text-base"
             >
               Careers
@@ -133,7 +141,21 @@ export default function Header() {
                 className="w-full flex justify-between items-center px-3 py-2.5 text-gray-400 hover:text-gray-200 transition-all duration-200 font-medium"
               >
                 Services
-                <svg className={`w-5 h-5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                <svg
+                  className={`w-5 h-5 transition-transform ${
+                    isServicesOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
               </button>
               {isServicesOpen && (
                 <div className="pl-4 mt-2 space-y-2 border-l-2 border-cyan-400/20">

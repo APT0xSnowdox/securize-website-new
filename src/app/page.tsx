@@ -1,12 +1,13 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 // Hero Section Content - Easy to modify
 const HERO_CONTENT = {
   headline: "Enterprise-Grade Security Testing at Machine Speed",
-  description: "AI-powered penetration testing that delivers comprehensive vulnerability assessments in hours, not weeks.",
+  description:
+    "AI-powered penetration testing that delivers comprehensive vulnerability assessments in hours, not weeks.",
   ctaText: "Start a Pentest",
-  ctaLink: "/pentest"
+  ctaLink: "/pentest",
 };
 
 // Statistics Section Content - Easy to modify
@@ -15,65 +16,75 @@ const STATS_CONTENT = {
   stats: [
     {
       value: "15+",
-      description: "Secured Businesses"
+      description: "Secured Businesses",
     },
     {
       value: "500+",
-      description: "Application vulnerabilities discovered"
+      description: "Application vulnerabilities discovered",
     },
     {
       value: "80x",
-      description: "Faster than traditional pentesting"
-    }
-  ]
+      description: "Faster than traditional pentesting",
+    },
+  ],
 };
 
 // Features Section Content - Easy to modify
 const FEATURES_CONTENT = {
   heading: "Your AI security force multiplier",
-  subtitle: "Deploy autonomous AI agents that work in parallel to discover, validate, and exploit vulnerabilities across your entire attack surface—without human intervention",
+  subtitle:
+    "Deploy autonomous AI agents that work in parallel to discover, validate, and exploit vulnerabilities across your entire attack surface—without human intervention",
   features: [
     {
       title: "Autonomous AI Agents",
-      description: "AI-powered agents trained on extensive attack patterns execute comprehensive penetration testing across web applications, APIs, and infrastructure at machine speed."
+      description:
+        "AI-powered agents trained on extensive attack patterns execute comprehensive penetration testing across web applications, APIs, and infrastructure at machine speed.",
     },
     {
       title: "On-demand Pentesting",
-      description: "Launch security assessments in hours, not weeks. Seamlessly integrate into CI/CD pipelines for continuous security validation throughout your development cycle."
+      description:
+        "Launch security assessments in hours, not weeks. Seamlessly integrate into CI/CD pipelines for continuous security validation throughout your development cycle.",
     },
     {
       title: "Complete Attack Surface Coverage",
-      description: "Systematic testing of every endpoint, parameter, and authentication mechanism ensures comprehensive coverage with zero blind spots."
+      description:
+        "Systematic testing of every endpoint, parameter, and authentication mechanism ensures comprehensive coverage with zero blind spots.",
     },
     {
       title: "Proven Results",
-      description: "Validated against real-world vulnerabilities with 500+ application vulnerabilities discovered since September 2025, delivering reproducible proof-of-concepts."
-    }
-  ]
+      description:
+        "Validated against real-world vulnerabilities with 500+ application vulnerabilities discovered since September 2025, delivering reproducible proof-of-concepts.",
+    },
+  ],
 };
 
 // Comprehensive Security Section Content - Easy to modify
 const COMPREHENSIVE_SECURITY_CONTENT = {
   title: "AI-powered vulnerability identification and exploitation",
-  subtitle: "Autonomous AI agents that identify, validate, and exploit vulnerabilities across your entire application stack",
+  subtitle:
+    "Autonomous AI agents that identify, validate, and exploit vulnerabilities across your entire application stack",
   features: [
     {
       title: "Intelligent Vulnerability Discovery",
-      description: "Our AI pentesting solution automatically identifies vulnerabilities across web applications, APIs, and infrastructure. Advanced algorithms detect security flaws including SQL injection, XSS, authentication bypasses, and more."
+      description:
+        "Our AI pentesting solution automatically identifies vulnerabilities across web applications, APIs, and infrastructure. Advanced algorithms detect security flaws including SQL injection, XSS, authentication bypasses, and more.",
     },
     {
       title: "Automated Exploitation",
-      description: "AI agents not only identify vulnerabilities but also exploit them safely to demonstrate impact. Generate proof-of-concept exploits that validate security issues and provide actionable remediation guidance."
+      description:
+        "AI agents not only identify vulnerabilities but also exploit them safely to demonstrate impact. Generate proof-of-concept exploits that validate security issues and provide actionable remediation guidance.",
     },
     {
       title: "Comprehensive Vulnerability Coverage",
-      description: "Systematically test every endpoint, parameter, and attack vector. Our AI solution identifies vulnerabilities across OWASP Top 10, authentication mechanisms, authorization flaws, and business logic vulnerabilities."
+      description:
+        "Systematically test every endpoint, parameter, and attack vector. Our AI solution identifies vulnerabilities across OWASP Top 10, authentication mechanisms, authorization flaws, and business logic vulnerabilities.",
     },
     {
       title: "Real-time Security Assessment",
-      description: "Continuous AI-powered scanning identifies and exploits vulnerabilities as they emerge. Integrate into your development workflow for real-time security validation with detailed exploit reports and remediation steps."
-    }
-  ]
+      description:
+        "Continuous AI-powered scanning identifies and exploits vulnerabilities as they emerge. Integrate into your development workflow for real-time security validation with detailed exploit reports and remediation steps.",
+    },
+  ],
 };
 
 // Demo Section Content - Easy to modify
@@ -81,17 +92,17 @@ const DEMO_SECTION_CONTENT = {
   heading: {
     line1: "Watch Securize hunt for",
     line2: "vulnerabilities in your",
-    line3: "applications"
+    line3: "applications",
   },
   ctaButton: {
     text: "Get a Demo",
-    link: "/demo"
+    link: "/demo",
   },
   dashboard: {
     project: "Securize Demo",
     tabs: [
       { name: "Redmine", active: true },
-      { name: "Assessments", active: false }
+      { name: "Assessments", active: false },
     ],
     findings: {
       title: "Redmine",
@@ -101,7 +112,7 @@ const DEMO_SECTION_CONTENT = {
         { level: "High", count: 2, color: "orange" },
         { level: "Medium", count: 0, color: "yellow" },
         { level: "Low", count: 0, color: "gray" },
-        { level: "Informational", count: 0, color: "slate" }
+        { level: "Informational", count: 0, color: "slate" },
       ],
       table: [
         {
@@ -110,7 +121,7 @@ const DEMO_SECTION_CONTENT = {
           path: "/projects.json",
           severity: "Critical",
           status: "Open",
-          lastSeen: "2025-06-06 10:30"
+          lastSeen: "2025-06-06 10:30",
         },
         {
           id: "#8",
@@ -118,7 +129,7 @@ const DEMO_SECTION_CONTENT = {
           path: "text",
           severity: "High",
           status: "Open",
-          lastSeen: "2025-06-06 06:18"
+          lastSeen: "2025-06-06 06:18",
         },
         {
           id: "#2",
@@ -126,27 +137,23 @@ const DEMO_SECTION_CONTENT = {
           path: "text is",
           severity: "High",
           status: "Open",
-          lastSeen: "2025-06-06 06:42"
-        }
-      ]
+          lastSeen: "2025-06-06 06:42",
+        },
+      ],
     },
     testCoverage: {
       title: "Test coverage",
       project: "Redmine #3",
-      endpoints: [
-        "/issues.json",
-        "/issues.atom",
-        "/issues"
-      ],
+      endpoints: ["/issues.json", "/issues.atom", "/issues"],
       categories: [
         "XSS",
         "SQL INJECTION",
         "OPEN REDIRECT",
         "EXPOSED SECRETS",
-        "CACHE POISONING"
-      ]
-    }
-  }
+        "CACHE POISONING",
+      ],
+    },
+  },
 };
 
 export default function Home() {
@@ -156,20 +163,20 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-24 pb-16">
         {/* Subtle Grid Pattern Background */}
         <div className="absolute inset-0 opacity-[0.02]">
-          <div 
+          <div
             className="w-full h-full"
             style={{
               backgroundImage: `
                 linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
               `,
-              backgroundSize: '60px 60px'
+              backgroundSize: "60px 60px",
             }}
           />
         </div>
 
         {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-gray-900/50" />
+        <div className="absolute inset-0 bg-linear-to-b from-black via-black to-gray-900/50" />
 
         {/* Hero Content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -190,14 +197,26 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-8 py-4 bg-cyan-400 text-black rounded-lg font-semibold text-base hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-400/30 hover:scale-[1.02]"
             >
               {HERO_CONTENT.ctaText}
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
               </svg>
             </Link>
 
             {/* Trust Indicators */}
             <div className="mt-16 pt-8 border-t border-gray-800/50">
-              <p className="text-sm text-gray-500 font-mono tracking-wider uppercase">Trusted by Security Teams</p>
+              <p className="text-sm text-gray-500 font-mono tracking-wider uppercase">
+                Trusted by Security Teams
+              </p>
             </div>
           </div>
         </div>
@@ -207,27 +226,33 @@ export default function Home() {
       <section className="py-24 lg:py-40 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
         {/* Tech Grid Background */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px'
-          }} />
+              backgroundSize: "50px 50px",
+            }}
+          />
         </div>
 
         {/* Animated Scan Lines */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            background: `repeating-linear-gradient(
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `repeating-linear-gradient(
               0deg,
               transparent,
               transparent 2px,
               rgba(6, 182, 212, 0.03) 2px,
               rgba(6, 182, 212, 0.03) 4px
             )`,
-            animation: 'pulse-glow 3s ease-in-out infinite'
-          }} />
+              animation: "pulse-glow 3s ease-in-out infinite",
+            }}
+          />
         </div>
 
         {/* Corner Accents */}
@@ -241,10 +266,13 @@ export default function Home() {
             {/* Professional Container with Tech Aesthetic */}
             <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-8 lg:p-16 shadow-2xl border border-cyan-400/20 relative overflow-hidden">
               {/* Glowing Border Effect */}
-              <div className="absolute inset-0 rounded-2xl opacity-50" style={{
-                background: `linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, transparent 50%, rgba(6, 182, 212, 0.1) 100%)`,
-                filter: 'blur(20px)'
-              }} />
+              <div
+                className="absolute inset-0 rounded-2xl opacity-50"
+                style={{
+                  background: `linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, transparent 50%, rgba(6, 182, 212, 0.1) 100%)`,
+                  filter: "blur(20px)",
+                }}
+              />
 
               {/* Inner Glow */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/5 via-transparent to-cyan-400/5 pointer-events-none" />
@@ -253,11 +281,17 @@ export default function Home() {
                 {/* Heading with Tech Typography */}
                 <div className="text-center mb-16 lg:mb-20">
                   <div className="inline-block mb-4">
-                    <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase">AI-Powered Security</span>
+                    <span className="text-cyan-400 text-sm font-mono tracking-widest uppercase">
+                      AI-Powered Security
+                    </span>
                   </div>
                   <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
-                    <span className="block">{STATS_CONTENT.heading.split('\n')[0]}</span>
-                    <span className="block text-cyan-400">{STATS_CONTENT.heading.split('\n')[1]}</span>
+                    <span className="block">
+                      {STATS_CONTENT.heading.split("\n")[0]}
+                    </span>
+                    <span className="block text-cyan-400">
+                      {STATS_CONTENT.heading.split("\n")[1]}
+                    </span>
                   </h2>
                   <div className="w-24 h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-6" />
                 </div>
@@ -270,20 +304,24 @@ export default function Home() {
                       className="group relative bg-gradient-to-br from-gray-800/50 to-black/50 rounded-xl p-6 lg:p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/20"
                     >
                       {/* Animated Accent Bar */}
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity" 
+                      <div
+                        className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
                         style={{
-                          boxShadow: '0 0 10px rgba(6, 182, 212, 0.5)',
-                          animation: 'pulse-glow 2s ease-in-out infinite'
+                          boxShadow: "0 0 10px rgba(6, 182, 212, 0.5)",
+                          animation: "pulse-glow 2s ease-in-out infinite",
                         }}
                       />
-                      
+
                       {/* Tech Pattern Overlay */}
                       <div className="absolute inset-0 opacity-5 rounded-xl overflow-hidden">
-                        <div className="absolute inset-0" style={{
-                          backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
-                          backgroundSize: '200% 200%',
-                          animation: 'pulse-glow 4s ease-in-out infinite'
-                        }} />
+                        <div
+                          className="absolute inset-0"
+                          style={{
+                            backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
+                            backgroundSize: "200% 200%",
+                            animation: "pulse-glow 4s ease-in-out infinite",
+                          }}
+                        />
                       </div>
 
                       {/* Content */}
@@ -296,7 +334,7 @@ export default function Home() {
                           {/* Animated Underline */}
                           <div className="h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mt-2 w-0 group-hover:w-full transition-all duration-500" />
                         </div>
-                        
+
                         {/* Description */}
                         <div className="text-gray-300 text-sm sm:text-base leading-relaxed text-left">
                           {stat.description}
@@ -325,27 +363,33 @@ export default function Home() {
       <section className="py-24 lg:py-40 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
         {/* Cybersecurity Grid Background */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '60px 60px'
-          }} />
+              backgroundSize: "60px 60px",
+            }}
+          />
         </div>
 
         {/* Scan Line Effect */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            background: `repeating-linear-gradient(
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `repeating-linear-gradient(
               0deg,
               transparent,
               transparent 3px,
               rgba(6, 182, 212, 0.05) 3px,
               rgba(6, 182, 212, 0.05) 6px
             )`,
-            animation: 'pulse-glow 4s ease-in-out infinite'
-          }} />
+              animation: "pulse-glow 4s ease-in-out infinite",
+            }}
+          />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -369,26 +413,30 @@ export default function Home() {
                   className="group relative bg-gradient-to-br from-gray-800/80 via-gray-900/90 to-black rounded-xl p-8 lg:p-10 border border-cyan-400/20 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-400/20 transition-all duration-500 overflow-hidden"
                 >
                   {/* Animated Accent Bar with Glow */}
-                  <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
+                  <div
+                    className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
                     style={{
-                      boxShadow: '0 0 15px rgba(6, 182, 212, 0.6)',
-                      animation: 'pulse-glow 2s ease-in-out infinite'
+                      boxShadow: "0 0 15px rgba(6, 182, 212, 0.6)",
+                      animation: "pulse-glow 2s ease-in-out infinite",
                     }}
                   />
-                  
+
                   {/* Tech Pattern Overlay */}
                   <div className="absolute inset-0 opacity-5 rounded-xl overflow-hidden">
-                    <div className="absolute inset-0" style={{
-                      backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
-                      backgroundSize: '200% 200%',
-                      animation: 'pulse-glow 5s ease-in-out infinite'
-                    }} />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
+                        backgroundSize: "200% 200%",
+                        animation: "pulse-glow 5s ease-in-out infinite",
+                      }}
+                    />
                   </div>
 
                   {/* Corner Accents */}
                   <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-cyan-400/30 rounded-tr-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-cyan-400/30 rounded-bl-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  
+
                   {/* Content */}
                   <div className="relative z-10 pl-6 text-left">
                     {/* Icon with Enhanced Styling */}
@@ -404,19 +452,97 @@ export default function Home() {
                               className="group-hover:fill-cyan-500 transition-colors"
                             />
                             {/* Radiating hexagons */}
-                            <polygon points="50,5 60,10 60,20 50,25 40,20 40,10" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="80,30 90,35 90,45 80,50 70,45 70,35" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="80,50 90,55 90,65 80,70 70,65 70,55" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="50,75 60,80 60,90 50,95 40,90 40,80" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="20,50 30,55 30,65 20,70 10,65 10,55" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
-                            <polygon points="20,30 30,35 30,45 20,50 10,45 10,35" fill="#00f5ff" opacity="0.8" className="group-hover:opacity-100 transition-opacity" />
+                            <polygon
+                              points="50,5 60,10 60,20 50,25 40,20 40,10"
+                              fill="#00f5ff"
+                              opacity="0.8"
+                              className="group-hover:opacity-100 transition-opacity"
+                            />
+                            <polygon
+                              points="80,30 90,35 90,45 80,50 70,45 70,35"
+                              fill="#00f5ff"
+                              opacity="0.8"
+                              className="group-hover:opacity-100 transition-opacity"
+                            />
+                            <polygon
+                              points="80,50 90,55 90,65 80,70 70,65 70,55"
+                              fill="#00f5ff"
+                              opacity="0.8"
+                              className="group-hover:opacity-100 transition-opacity"
+                            />
+                            <polygon
+                              points="50,75 60,80 60,90 50,95 40,90 40,80"
+                              fill="#00f5ff"
+                              opacity="0.8"
+                              className="group-hover:opacity-100 transition-opacity"
+                            />
+                            <polygon
+                              points="20,50 30,55 30,65 20,70 10,65 10,55"
+                              fill="#00f5ff"
+                              opacity="0.8"
+                              className="group-hover:opacity-100 transition-opacity"
+                            />
+                            <polygon
+                              points="20,30 30,35 30,45 20,50 10,45 10,35"
+                              fill="#00f5ff"
+                              opacity="0.8"
+                              className="group-hover:opacity-100 transition-opacity"
+                            />
                             {/* Connection lines */}
-                            <line x1="50" y1="25" x2="50" y2="30" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="70" y1="40" x2="75" y2="40" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="70" y1="60" x2="75" y2="60" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="50" y1="70" x2="50" y2="75" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="30" y1="60" x2="25" y2="60" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
-                            <line x1="30" y1="40" x2="25" y2="40" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" />
+                            <line
+                              x1="50"
+                              y1="25"
+                              x2="50"
+                              y2="30"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                              strokeDasharray="4,4"
+                            />
+                            <line
+                              x1="70"
+                              y1="40"
+                              x2="75"
+                              y2="40"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                              strokeDasharray="4,4"
+                            />
+                            <line
+                              x1="70"
+                              y1="60"
+                              x2="75"
+                              y2="60"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                              strokeDasharray="4,4"
+                            />
+                            <line
+                              x1="50"
+                              y1="70"
+                              x2="50"
+                              y2="75"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                              strokeDasharray="4,4"
+                            />
+                            <line
+                              x1="30"
+                              y1="60"
+                              x2="25"
+                              y2="60"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                              strokeDasharray="4,4"
+                            />
+                            <line
+                              x1="30"
+                              y1="40"
+                              x2="25"
+                              y2="40"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                              strokeDasharray="4,4"
+                            />
                           </svg>
                         </div>
                       )}
@@ -424,17 +550,75 @@ export default function Home() {
                         <div className="relative w-16 h-16">
                           {/* Stopwatch Icon */}
                           <svg viewBox="0 0 100 100" className="w-full h-full">
-                            <circle cx="50" cy="50" r="35" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
-                            <circle cx="50" cy="50" r="30" fill="none" stroke="#000" strokeWidth="3" />
-                            <line x1="50" y1="50" x2="50" y2="35" stroke="#000" strokeWidth="3" strokeLinecap="round" />
-                            <line x1="50" y1="50" x2="60" y2="50" stroke="#000" strokeWidth="2" strokeLinecap="round" />
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="35"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
+                            />
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="30"
+                              fill="none"
+                              stroke="#000"
+                              strokeWidth="3"
+                            />
+                            <line
+                              x1="50"
+                              y1="50"
+                              x2="50"
+                              y2="35"
+                              stroke="#000"
+                              strokeWidth="3"
+                              strokeLinecap="round"
+                            />
+                            <line
+                              x1="50"
+                              y1="50"
+                              x2="60"
+                              y2="50"
+                              stroke="#000"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                            />
                             <circle cx="50" cy="50" r="2" fill="#000" />
                             {/* Arrow pointing right */}
-                            <path d="M70 50 L80 50 M75 45 L80 50 L75 55" stroke="#000" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                            <path
+                              d="M70 50 L80 50 M75 45 L80 50 L75 55"
+                              stroke="#000"
+                              strokeWidth="3"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              fill="none"
+                            />
                             {/* Pipeline/Cylinder */}
-                            <rect x="15" y="45" width="8" height="10" rx="2" fill="#00f5ff" opacity="0.6" />
-                            <line x1="15" y1="48" x2="23" y2="48" stroke="#000" strokeWidth="1" />
-                            <line x1="15" y1="52" x2="23" y2="52" stroke="#000" strokeWidth="1" />
+                            <rect
+                              x="15"
+                              y="45"
+                              width="8"
+                              height="10"
+                              rx="2"
+                              fill="#00f5ff"
+                              opacity="0.6"
+                            />
+                            <line
+                              x1="15"
+                              y1="48"
+                              x2="23"
+                              y2="48"
+                              stroke="#000"
+                              strokeWidth="1"
+                            />
+                            <line
+                              x1="15"
+                              y1="52"
+                              x2="23"
+                              y2="52"
+                              stroke="#000"
+                              strokeWidth="1"
+                            />
                           </svg>
                         </div>
                       )}
@@ -442,19 +626,105 @@ export default function Home() {
                         <div className="relative w-16 h-16">
                           {/* Coverage/Network Icon */}
                           <svg viewBox="0 0 100 100" className="w-full h-full">
-                            <circle cx="50" cy="50" r="30" fill="none" stroke="#00f5ff" strokeWidth="3" className="group-hover:stroke-cyan-500 transition-colors" />
-                            <circle cx="30" cy="30" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
-                            <circle cx="70" cy="30" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
-                            <circle cx="30" cy="70" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
-                            <circle cx="70" cy="70" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
-                            <circle cx="50" cy="20" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
-                            <circle cx="50" cy="80" r="8" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
-                            <line x1="30" y1="30" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
-                            <line x1="70" y1="30" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
-                            <line x1="30" y1="70" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
-                            <line x1="70" y1="70" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
-                            <line x1="50" y1="20" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
-                            <line x1="50" y1="80" x2="50" y2="50" stroke="#00f5ff" strokeWidth="2" />
+                            <circle
+                              cx="50"
+                              cy="50"
+                              r="30"
+                              fill="none"
+                              stroke="#00f5ff"
+                              strokeWidth="3"
+                              className="group-hover:stroke-cyan-500 transition-colors"
+                            />
+                            <circle
+                              cx="30"
+                              cy="30"
+                              r="8"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
+                            />
+                            <circle
+                              cx="70"
+                              cy="30"
+                              r="8"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
+                            />
+                            <circle
+                              cx="30"
+                              cy="70"
+                              r="8"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
+                            />
+                            <circle
+                              cx="70"
+                              cy="70"
+                              r="8"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
+                            />
+                            <circle
+                              cx="50"
+                              cy="20"
+                              r="8"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
+                            />
+                            <circle
+                              cx="50"
+                              cy="80"
+                              r="8"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
+                            />
+                            <line
+                              x1="30"
+                              y1="30"
+                              x2="50"
+                              y2="50"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                            />
+                            <line
+                              x1="70"
+                              y1="30"
+                              x2="50"
+                              y2="50"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                            />
+                            <line
+                              x1="30"
+                              y1="70"
+                              x2="50"
+                              y2="50"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                            />
+                            <line
+                              x1="70"
+                              y1="70"
+                              x2="50"
+                              y2="50"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                            />
+                            <line
+                              x1="50"
+                              y1="20"
+                              x2="50"
+                              y2="50"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                            />
+                            <line
+                              x1="50"
+                              y1="80"
+                              x2="50"
+                              y2="50"
+                              stroke="#00f5ff"
+                              strokeWidth="2"
+                            />
                           </svg>
                         </div>
                       )}
@@ -462,11 +732,36 @@ export default function Home() {
                         <div className="relative w-16 h-16">
                           {/* Shield/Battle Icon */}
                           <svg viewBox="0 0 100 100" className="w-full h-full">
-                            <path d="M50 20 L70 25 L75 45 L50 80 L25 45 L30 25 Z" fill="#00f5ff" className="group-hover:fill-cyan-500 transition-colors" />
-                            <path d="M50 25 L65 29 L69 45 L50 75 L31 45 L35 29 Z" fill="#000" opacity="0.2" />
-                            <path d="M50 35 L58 37 L60 45 L50 60 L40 45 L42 37 Z" fill="#00f5ff" />
-                            <line x1="50" y1="20" x2="50" y2="35" stroke="#000" strokeWidth="2" />
-                            <line x1="50" y1="60" x2="50" y2="80" stroke="#000" strokeWidth="2" />
+                            <path
+                              d="M50 20 L70 25 L75 45 L50 80 L25 45 L30 25 Z"
+                              fill="#00f5ff"
+                              className="group-hover:fill-cyan-500 transition-colors"
+                            />
+                            <path
+                              d="M50 25 L65 29 L69 45 L50 75 L31 45 L35 29 Z"
+                              fill="#000"
+                              opacity="0.2"
+                            />
+                            <path
+                              d="M50 35 L58 37 L60 45 L50 60 L40 45 L42 37 Z"
+                              fill="#00f5ff"
+                            />
+                            <line
+                              x1="50"
+                              y1="20"
+                              x2="50"
+                              y2="35"
+                              stroke="#000"
+                              strokeWidth="2"
+                            />
+                            <line
+                              x1="50"
+                              y1="60"
+                              x2="50"
+                              y2="80"
+                              stroke="#000"
+                              strokeWidth="2"
+                            />
                           </svg>
                         </div>
                       )}
@@ -485,7 +780,7 @@ export default function Home() {
 
                   {/* Hover Glow Effect */}
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  
+
                   {/* Subtle Inner Glow */}
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/0 via-transparent to-cyan-400/0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none" />
                 </div>
@@ -501,26 +796,59 @@ export default function Home() {
         <div className="w-full lg:w-1/2 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden flex items-center justify-center p-8 lg:p-16">
           {/* Enhanced Tech Grid Pattern Background */}
           <div className="absolute inset-0 opacity-15">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `
                 linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
               `,
-              backgroundSize: '50px 50px'
-            }} />
+                backgroundSize: "50px 50px",
+              }}
+            />
           </div>
 
           {/* Isometric Grid Pattern Overlay */}
           <div className="absolute inset-0 opacity-10">
-            <svg className="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
+            <svg
+              className="w-full h-full"
+              viewBox="0 0 200 200"
+              preserveAspectRatio="xMidYMid slice"
+            >
               <defs>
-                <pattern id="isometric-grid-enhanced" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 0 20 L 20 10 L 40 20 L 40 40 L 20 50 L 0 40 Z" fill="none" stroke="rgba(6, 182, 212, 0.4)" strokeWidth="0.5" />
-                  <path d="M 20 10 L 20 50" fill="none" stroke="rgba(6, 182, 212, 0.4)" strokeWidth="0.5" />
-                  <path d="M 0 20 L 40 20" fill="none" stroke="rgba(6, 182, 212, 0.4)" strokeWidth="0.5" />
+                <pattern
+                  id="isometric-grid-enhanced"
+                  x="0"
+                  y="0"
+                  width="40"
+                  height="40"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M 0 20 L 20 10 L 40 20 L 40 40 L 20 50 L 0 40 Z"
+                    fill="none"
+                    stroke="rgba(6, 182, 212, 0.4)"
+                    strokeWidth="0.5"
+                  />
+                  <path
+                    d="M 20 10 L 20 50"
+                    fill="none"
+                    stroke="rgba(6, 182, 212, 0.4)"
+                    strokeWidth="0.5"
+                  />
+                  <path
+                    d="M 0 20 L 40 20"
+                    fill="none"
+                    stroke="rgba(6, 182, 212, 0.4)"
+                    strokeWidth="0.5"
+                  />
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(#isometric-grid-enhanced)" />
+              <rect
+                width="100%"
+                height="100%"
+                fill="url(#isometric-grid-enhanced)"
+              />
             </svg>
           </div>
 
@@ -534,12 +862,12 @@ export default function Home() {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
               {COMPREHENSIVE_SECURITY_CONTENT.title}
             </h2>
-            
+
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-gray-300 mb-12 leading-relaxed">
               {COMPREHENSIVE_SECURITY_CONTENT.subtitle}
             </p>
-            
+
             {/* Accent Line */}
             <div className="w-20 h-0.5 bg-gradient-to-r from-cyan-400 to-transparent" />
 
@@ -553,34 +881,80 @@ export default function Home() {
                     <stop offset="100%" stopColor="#00f5ff" stopOpacity="0" />
                   </radialGradient>
                 </defs>
-                
+
                 {/* Node positions (hexagonal pattern) */}
                 {[
-                  { cx: 200, cy: 200, id: 'center' },
-                  { cx: 200, cy: 100, id: 'top' },
-                  { cx: 300, cy: 150, id: 'top-right' },
-                  { cx: 300, cy: 250, id: 'bottom-right' },
-                  { cx: 200, cy: 300, id: 'bottom' },
-                  { cx: 100, cy: 250, id: 'bottom-left' },
-                  { cx: 100, cy: 150, id: 'top-left' }
+                  { cx: 200, cy: 200, id: "center" },
+                  { cx: 200, cy: 100, id: "top" },
+                  { cx: 300, cy: 150, id: "top-right" },
+                  { cx: 300, cy: 250, id: "bottom-right" },
+                  { cx: 200, cy: 300, id: "bottom" },
+                  { cx: 100, cy: 250, id: "bottom-left" },
+                  { cx: 100, cy: 150, id: "top-left" },
                 ].map((node, index) => (
                   <g key={node.id}>
                     {/* Enhanced Radiating circles with glow */}
-                    <circle cx={node.cx} cy={node.cy} r="50" fill="url(#nodeGlow)" opacity="0.2" />
-                    <circle cx={node.cx} cy={node.cy} r="45" fill="none" stroke="#00f5ff" strokeWidth="2" opacity="0.4" />
-                    <circle cx={node.cx} cy={node.cy} r="35" fill="none" stroke="#00f5ff" strokeWidth="1.5" opacity="0.5" />
-                    <circle cx={node.cx} cy={node.cy} r="25" fill="none" stroke="#00f5ff" strokeWidth="1" opacity="0.6" />
-                    
+                    <circle
+                      cx={node.cx}
+                      cy={node.cy}
+                      r="50"
+                      fill="url(#nodeGlow)"
+                      opacity="0.2"
+                    />
+                    <circle
+                      cx={node.cx}
+                      cy={node.cy}
+                      r="45"
+                      fill="none"
+                      stroke="#00f5ff"
+                      strokeWidth="2"
+                      opacity="0.4"
+                    />
+                    <circle
+                      cx={node.cx}
+                      cy={node.cy}
+                      r="35"
+                      fill="none"
+                      stroke="#00f5ff"
+                      strokeWidth="1.5"
+                      opacity="0.5"
+                    />
+                    <circle
+                      cx={node.cx}
+                      cy={node.cy}
+                      r="25"
+                      fill="none"
+                      stroke="#00f5ff"
+                      strokeWidth="1"
+                      opacity="0.6"
+                    />
+
                     {/* Enhanced 3D Cube Node */}
                     <g transform={`translate(${node.cx}, ${node.cy})`}>
                       {/* Cube faces with gradient */}
-                      <polygon points="-15,-15 15,-15 15,15 -15,15" fill="#00f5ff" opacity="0.8" />
-                      <polygon points="15,-15 25,-5 25,15 15,15" fill="#33cfff" opacity="0.6" />
-                      <polygon points="15,-15 25,-5 5,-5 -15,-15" fill="#00f5ff" opacity="0.7" />
-                      
+                      <polygon
+                        points="-15,-15 15,-15 15,15 -15,15"
+                        fill="#00f5ff"
+                        opacity="0.8"
+                      />
+                      <polygon
+                        points="15,-15 25,-5 25,15 15,15"
+                        fill="#33cfff"
+                        opacity="0.6"
+                      />
+                      <polygon
+                        points="15,-15 25,-5 5,-5 -15,-15"
+                        fill="#00f5ff"
+                        opacity="0.7"
+                      />
+
                       {/* Enhanced Starburst icon */}
                       <g transform="translate(0, -20)">
-                        <path d="M0,-8 L2,-2 L8,-2 L3,1 L5,7 L0,4 L-5,7 L-3,1 L-8,-2 L-2,-2 Z" fill="white" opacity="1" />
+                        <path
+                          d="M0,-8 L2,-2 L8,-2 L3,1 L5,7 L0,4 L-5,7 L-3,1 L-8,-2 L-2,-2 Z"
+                          fill="white"
+                          opacity="1"
+                        />
                         <circle cx="0" cy="0" r="3" fill="#00f5ff" />
                       </g>
                     </g>
@@ -588,12 +962,66 @@ export default function Home() {
                 ))}
 
                 {/* Enhanced Connection lines with animation effect */}
-                <line x1="200" y1="200" x2="200" y2="100" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="300" y2="150" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="300" y2="250" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="200" y2="300" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="100" y2="250" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
-                <line x1="200" y1="200" x2="100" y2="150" stroke="#00f5ff" strokeWidth="2" strokeDasharray="4,4" opacity="0.5" />
+                <line
+                  x1="200"
+                  y1="200"
+                  x2="200"
+                  y2="100"
+                  stroke="#00f5ff"
+                  strokeWidth="2"
+                  strokeDasharray="4,4"
+                  opacity="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="200"
+                  x2="300"
+                  y2="150"
+                  stroke="#00f5ff"
+                  strokeWidth="2"
+                  strokeDasharray="4,4"
+                  opacity="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="200"
+                  x2="300"
+                  y2="250"
+                  stroke="#00f5ff"
+                  strokeWidth="2"
+                  strokeDasharray="4,4"
+                  opacity="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="200"
+                  x2="200"
+                  y2="300"
+                  stroke="#00f5ff"
+                  strokeWidth="2"
+                  strokeDasharray="4,4"
+                  opacity="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="200"
+                  x2="100"
+                  y2="250"
+                  stroke="#00f5ff"
+                  strokeWidth="2"
+                  strokeDasharray="4,4"
+                  opacity="0.5"
+                />
+                <line
+                  x1="200"
+                  y1="200"
+                  x2="100"
+                  y2="150"
+                  stroke="#00f5ff"
+                  strokeWidth="2"
+                  strokeDasharray="4,4"
+                  opacity="0.5"
+                />
               </svg>
             </div>
           </div>
@@ -603,48 +1031,57 @@ export default function Home() {
         <div className="w-full lg:w-1/2 bg-gradient-to-br from-gray-900 via-black to-gray-900 p-8 lg:p-16 flex items-center relative overflow-hidden">
           {/* Tech Pattern Background */}
           <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, #00f5ff 1px, transparent 0)`,
-              backgroundSize: '30px 30px'
-            }} />
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `radial-gradient(circle at 2px 2px, #00f5ff 1px, transparent 0)`,
+                backgroundSize: "30px 30px",
+              }}
+            />
           </div>
 
           {/* Scan Line Effect */}
           <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              background: `repeating-linear-gradient(
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `repeating-linear-gradient(
                 0deg,
                 transparent,
                 transparent 2px,
                 rgba(6, 182, 212, 0.03) 2px,
                 rgba(6, 182, 212, 0.03) 4px
               )`,
-              animation: 'pulse-glow 3s ease-in-out infinite'
-            }} />
+                animation: "pulse-glow 3s ease-in-out infinite",
+              }}
+            />
           </div>
 
           <div className="w-full max-w-2xl mx-auto space-y-6 lg:space-y-8 relative z-10">
             {COMPREHENSIVE_SECURITY_CONTENT.features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="group relative bg-gradient-to-br from-gray-800/50 via-gray-900/70 to-black/50 rounded-xl p-6 lg:p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10"
               >
                 {/* Animated Accent Bar with Glow */}
-                <div 
+                <div
                   className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-cyan-400 via-cyan-500 to-cyan-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition-opacity"
                   style={{
-                    boxShadow: '0 0 10px rgba(6, 182, 212, 0.5)',
-                    animation: 'pulse-glow 2s ease-in-out infinite'
+                    boxShadow: "0 0 10px rgba(6, 182, 212, 0.5)",
+                    animation: "pulse-glow 2s ease-in-out infinite",
                   }}
                 />
-                
+
                 {/* Tech Pattern Overlay */}
                 <div className="absolute inset-0 opacity-5 rounded-xl overflow-hidden">
-                  <div className="absolute inset-0" style={{
-                    backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
-                    backgroundSize: '200% 200%',
-                    animation: 'pulse-glow 4s ease-in-out infinite'
-                  }} />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      backgroundImage: `linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%)`,
+                      backgroundSize: "200% 200%",
+                      animation: "pulse-glow 4s ease-in-out infinite",
+                    }}
+                  />
                 </div>
 
                 {/* Content */}
@@ -669,27 +1106,33 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
         {/* Tech Grid Background */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '60px 60px'
-          }} />
+              backgroundSize: "60px 60px",
+            }}
+          />
         </div>
 
         {/* Scan Line Effect */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            background: `repeating-linear-gradient(
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `repeating-linear-gradient(
               0deg,
               transparent,
               transparent 3px,
               rgba(6, 182, 212, 0.03) 3px,
               rgba(6, 182, 212, 0.03) 6px
             )`,
-            animation: 'pulse-glow 4s ease-in-out infinite'
-          }} />
+              animation: "pulse-glow 4s ease-in-out infinite",
+            }}
+          />
         </div>
 
         {/* Corner Accents */}
@@ -703,10 +1146,13 @@ export default function Home() {
             {/* Compact Professional Card Container */}
             <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-xl p-6 lg:p-8 shadow-2xl border border-cyan-400/20 relative overflow-hidden">
               {/* Glowing Border Effect */}
-              <div className="absolute inset-0 rounded-xl opacity-40" style={{
-                background: `linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, transparent 50%, rgba(6, 182, 212, 0.08) 100%)`,
-                filter: 'blur(15px)'
-              }} />
+              <div
+                className="absolute inset-0 rounded-xl opacity-40"
+                style={{
+                  background: `linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, transparent 50%, rgba(6, 182, 212, 0.08) 100%)`,
+                  filter: "blur(15px)",
+                }}
+              />
 
               {/* Inner Glow */}
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-cyan-400/3 via-transparent to-cyan-400/3 pointer-events-none" />
@@ -724,14 +1170,22 @@ export default function Home() {
 
                     {/* Heading - Smaller and Refined */}
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight text-center lg:text-left">
-                      <span className="block">{DEMO_SECTION_CONTENT.heading.line1}</span>
-                      <span className="block">{DEMO_SECTION_CONTENT.heading.line2}</span>
-                      <span className="block text-cyan-400">{DEMO_SECTION_CONTENT.heading.line3}</span>
+                      <span className="block">
+                        {DEMO_SECTION_CONTENT.heading.line1}
+                      </span>
+                      <span className="block">
+                        {DEMO_SECTION_CONTENT.heading.line2}
+                      </span>
+                      <span className="block text-cyan-400">
+                        {DEMO_SECTION_CONTENT.heading.line3}
+                      </span>
                     </h2>
 
                     {/* Description - Smaller */}
                     <p className="text-sm sm:text-base text-gray-300 mb-6 leading-relaxed">
-                      Experience real-time penetration testing insights and AI-powered analysis through our comprehensive security dashboard.
+                      Experience real-time penetration testing insights and
+                      AI-powered analysis through our comprehensive security
+                      dashboard.
                     </p>
 
                     {/* CTA Button - Smaller */}
@@ -750,14 +1204,14 @@ export default function Home() {
                   <div className="lg:w-3/5 relative">
                     {/* Glow Effect Behind Image */}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/15 via-cyan-400/8 to-transparent rounded-lg blur-2xl opacity-40" />
-                    
+
                     {/* Image Container with Professional Styling */}
                     <div className="relative rounded-lg overflow-hidden border border-cyan-400/30 shadow-xl hover:shadow-cyan-400/20 transition-all duration-300 group">
                       {/* Top Glow Bar */}
                       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-40 z-10" />
-                      
+
                       {/* Dashboard Image */}
-            <Image
+                      <Image
                         src="/dash.jpg"
                         alt="Securize Dashboard - Real-time penetration testing insights"
                         width={1200}
@@ -765,7 +1219,7 @@ export default function Home() {
                         className="w-full h-auto object-cover"
                         priority
                       />
-                      
+
                       {/* Overlay Glow on Hover */}
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/0 via-cyan-400/0 to-cyan-400/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     </div>
@@ -775,7 +1229,9 @@ export default function Home() {
                       <div className="h-px w-12 bg-gradient-to-r from-transparent to-cyan-400" />
                       <div className="flex items-center space-x-2">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse" />
-                        <span className="text-xs text-cyan-400/80 font-mono uppercase tracking-wider text-[10px]">Live Data</span>
+                        <span className="text-xs text-cyan-400/80 font-mono uppercase tracking-wider text-[10px]">
+                          Live Data
+                        </span>
                       </div>
                       <div className="h-px w-12 bg-gradient-to-l from-transparent to-cyan-400" />
                     </div>
