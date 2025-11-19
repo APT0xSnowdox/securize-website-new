@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Securize - AI-Powered Penetration Testing Platform",
+  title: "Novaize",
   description:
-    "Securize is the leading AI-powered penetration testing platform that delivers enterprise-grade security testing at machine speed. Discover vulnerabilities faster with autonomous AI agents.",
+    "A leading AI-powered penetration testing platform that delivers enterprise-grade security testing at machine speed. Discover vulnerabilities faster with autonomous AI agents.",
   keywords:
     "AI pentesting, penetration testing, cybersecurity, vulnerability assessment, automated security testing, AI security platform",
 };
